@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o C:\GP\code\fpga\FPGA\SquareWave\SquareWave\//SquareWave -u 0 C:/GP/code/fpga/FPGA/SquareWave/SquareWave/squarewave.bit -x xc18v04 
+
+PROM C:\GP\code\fpga\FPGA\SquareWave\SquareWave\//SquareWave.prm map: Thu Apr 09 10:53:03 2015
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          512K
+PROM start    0000:0000
+PROM end      0007:ffff
+PROM checksum 0587c407
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0003:575f     Apr 09 10:52:18 2015 C:/GP/code/fpga/FPGA/SquareWave/SquareWave/squarewave.bit

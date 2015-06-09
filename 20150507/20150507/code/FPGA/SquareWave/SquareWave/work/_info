@@ -1,0 +1,91 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\GP\code\fpga\FPGA\SquareWave\SquareWave
+vglbl
+Z1 !s100 T?5S;>bN`@zG_25]R_4A33
+Z2 IM]ZbjZ3M7N:<kPHcL<Jll0
+Z3 VM[9mS]S:KA1i4VeCMX35[3
+Z4 dC:\Users\Administrator\Documents\GitHub\GP\20150507\20150507\code\FPGA\SquareWave\SquareWave
+Z5 w1147889348
+Z6 8C:/Xilinx/verilog/src/glbl.v
+Z7 FC:/Xilinx/verilog/src/glbl.v
+L0 5
+Z8 OL;L;10.0a;49
+r1
+!s85 0
+31
+!s108 1433846196.605000
+!s107 C:/Xilinx/verilog/src/glbl.v|
+Z9 !s90 -reportprogress|300|C:/Xilinx/verilog/src/glbl.v|
+Z10 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vqq_v
+Z11 !s100 ;5Goi9QLQ4Z8I^DDb@5<W1
+Z12 I@`I`d5Tn808cUV1k;PlXI2
+Z13 VmoSWK:PH_d^kG?;84D6UE3
+R4
+Z14 w1433845916
+8qq.v
+Fqq.v
+L0 25
+R8
+r1
+31
+Z15 !s90 -reportprogress|300|qq.v|
+R10
+Z16 !s108 1433846016.757000
+Z17 !s107 qq.v|
+!s85 0
+vSquareWave
+Z18 !s100 UM;6X_n9`L_;ziD8_@aIW3
+Z19 I2z3BhBLeX9L5>Q145D7ND3
+Z20 VNjK_L=7?O8OC:FBodGo7X0
+R4
+Z21 w1431000598
+Z22 8SquareWave.v
+Z23 FSquareWave.v
+L0 22
+R8
+r1
+31
+Z24 !s90 -reportprogress|300|SquareWave.v|
+R10
+Z25 n@square@wave
+Z26 !s108 1433846196.284000
+Z27 !s107 SquareWave.v|
+!s85 0
+vtest_v
+Z28 IUZnY>0U2Kf1W:iReJ]PYz3
+Z29 V]L5[if4P9Q6^:BU]?A]3o3
+R4
+Z30 w1433846187
+Z31 8test.v
+Z32 Ftest.v
+L0 25
+R8
+r1
+31
+Z33 !s90 -reportprogress|300|test.v|
+R10
+Z34 !s100 P<W1=?TBehcffU5HQBHG[1
+!s85 0
+Z35 !s108 1433846196.451000
+Z36 !s107 test.v|
+vtt_v
+Z37 !s100 Z9f]O@>QOMGQ>^:?PhHdX1
+Z38 I1WS1oLR5R18jB1A:e:Ljd1
+Z39 V5O4]PeGIFGo;XF@:[K2SY3
+R4
+Z40 w1431001035
+8tt.v
+Ftt.v
+L0 25
+R8
+r1
+31
+Z41 !s90 -reportprogress|300|tt.v|
+R10
+Z42 !s108 1433845716.993000
+Z43 !s107 tt.v|
+!s85 0

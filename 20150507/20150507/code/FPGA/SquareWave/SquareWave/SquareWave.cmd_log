@@ -1,0 +1,9 @@
+xst -ise "C:/GP/code/fpga/FPGA/SquareWave/SquareWave/SquareWave.ise" -intstyle ise -ifn SquareWave.xst -ofn SquareWave.syr
+xst -ise "C:/GP/code/fpga/FPGA/SquareWave/SquareWave/SquareWave.ise" -intstyle ise -ifn SquareWave.xst -ofn SquareWave.syr
+ngdbuild -ise "C:/GP/code/fpga/FPGA/SquareWave/SquareWave/SquareWave.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xcv300-pq240-4 "SquareWave.ngc" SquareWave.ngd
+ngdbuild -ise "C:/GP/code/fpga/FPGA/SquareWave/SquareWave/SquareWave.ise" -intstyle ise -dd _ngo -nt timestamp -uc "SquareWave.ucf" -p xcv300-pq240-4 "SquareWave.ngc" SquareWave.ngd
+map -ise "C:/GP/code/fpga/FPGA/SquareWave/SquareWave/SquareWave.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o SquareWave_map.ncd SquareWave.ngd SquareWave.pcf
+par -ise "C:/GP/code/fpga/FPGA/SquareWave/SquareWave/SquareWave.ise" -w -intstyle ise -ol std -t 1 SquareWave_map.ncd SquareWave.ncd SquareWave.pcf
+trce -ise "C:/GP/code/fpga/FPGA/SquareWave/SquareWave/SquareWave.ise" -intstyle ise -e 3 -l 3 -s 4 -xml SquareWave SquareWave.ncd -o SquareWave.twr SquareWave.pcf -ucf SquareWave.ucf
+bitgen -ise "C:/GP/code/fpga/FPGA/SquareWave/SquareWave/SquareWave.ise" -intstyle ise -f SquareWave.ut SquareWave.ncd
+xst -ise "C:/Users/Administrator/Documents/GitHub/GP/20150507/20150507/code/FPGA/SquareWave/SquareWave/SquareWave.ise" -intstyle ise -ifn SquareWave.xst -ofn SquareWave.syr

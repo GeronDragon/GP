@@ -1,0 +1,4 @@
+NET "iClk" TNM_NET = "iClk";
+TIMESPEC "TS_iClk" = PERIOD "iClk" 20 ns HIGH 50 %;
+OFFSET = IN 20 ns BEFORE "iClk"  ;
+OFFSET = OUT 20 ns AFTER "iClk"  ;

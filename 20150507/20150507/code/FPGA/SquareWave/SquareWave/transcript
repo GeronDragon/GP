@@ -1,0 +1,34 @@
+# Reading C:/modeltech64_10.0a/tcl/vsim/pref.tcl 
+# //  ModelSim SE-64 10.0a Feb 17 2011 
+# //
+# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do test_v.fdo 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module SquareWave
+# 
+# Top level modules:
+# 	SquareWave
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module test_v
+# 
+# Top level modules:
+# 	test_v
+# Model Technology ModelSim SE-64 vlog 10.0a Compiler 2011.02 Feb 17 2011
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# vsim -L xilinxcorelib_ver -L unisims_ver -lib work -t 1ps test_v glbl 
+# Loading work.test_v
+# Loading work.SquareWave
+# Loading work.glbl
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree

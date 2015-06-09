@@ -1,0 +1,5 @@
+# begin LFP file C:\GP\code\fpga\FPGA\SquareWave\SquareWave\SquareWave.lfp
+designfile SquareWave.v
+parttype xcv300-4-pq240
+bus_delimiter -1;
+set_busdelim_onsave 1;

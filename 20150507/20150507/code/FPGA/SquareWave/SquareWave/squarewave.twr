@@ -1,0 +1,109 @@
+--------------------------------------------------------------------------------
+Release 8.2i Trace 
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\bin\nt\trce.exe -ise
+C:/GP/code/fpga/FPGA/SquareWave/SquareWave/SquareWave.ise -intstyle ise -e 3 -l
+3 -s 4 -xml SquareWave SquareWave.ncd -o SquareWave.twr SquareWave.pcf -ucf
+SquareWave.ucf
+
+Design file:              squarewave.ncd
+Physical constraint file: squarewave.pcf
+Device,speed:             xcv300,-4 (FINAL 1.123 2006-05-03)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+
+================================================================================
+Timing constraint: TS_iClk = PERIOD TIMEGRP "iClk" 20 ns HIGH 50%;
+
+ 6339 items analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is  15.058ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: OFFSET = IN 20 ns BEFORE COMP "iClk";
+
+ 1 item analyzed, 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   3.200ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: OFFSET = OUT 20 ns AFTER COMP "iClk";
+
+ 1 item analyzed, 0 timing errors detected.
+ Minimum allowable offset is  12.427ns.
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock iClk
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+isquareWave |    3.200(R)|    0.000(R)|iClk_BUFGP        |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock iClk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+oState_n    |   12.427(R)|iClk_BUFGP        |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock iClk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+iClk           |   15.058|         |         |         |
+---------------+---------+---------+---------+---------+
+
+OFFSET = OUT 20 ns AFTER COMP "iClk";
+Largest slack: 7.573 ns; Smallest slack: 7.573 ns; Relative Skew: 0.000 ns; 
+-----------------------------------------------+-------------+-------------+
+PAD                                            |    Slack    |Relative Skew|
+-----------------------------------------------+-------------+-------------+
+oState_n                                       |        7.573|        0.000|
+-----------------------------------------------+-------------+-------------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 6341 paths, 0 nets, and 271 connections
+
+Design statistics:
+   Minimum period:  15.058ns   (Maximum frequency:  66.410MHz)
+   Minimum input required time before clock:   3.200ns
+   Minimum output required time after clock:  12.427ns
+
+
+Analysis completed Thu Apr 09 10:52:11 2015
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 94 MB
+
+
+

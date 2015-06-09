@@ -1,0 +1,376 @@
+Release 8.2i - xst I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.26 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.26 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: SquareWave.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SquareWave.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SquareWave"
+Output Format                      : NGC
+Target Device                      : xcv300-4-pq240
+
+---- Source Options
+Top Module Name                    : SquareWave
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : lut
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+Add Generic Clock Buffer(BUFG)     : 4
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : SquareWave.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+tristate2logic                     : Yes
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "SquareWave.v" in library work
+Module <SquareWave> compiled
+No errors in compilation
+Analysis of file <"SquareWave.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <SquareWave> in library <work> with parameters.
+	CRAZY_TIME = "00000000000000001010111111001000"
+	START_TIME = "00000000000000000111010100110000"
+
+Building hierarchy successfully finished.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <SquareWave>.
+	CRAZY_TIME = 32'sb00000000000000001010111111001000
+	START_TIME = 32'sb00000000000000000111010100110000
+Module <SquareWave> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <SquareWave>.
+    Related source file is "SquareWave.v".
+    Found 4x1-bit ROM for signal <$mux0000>.
+    Found 1-bit xor2 for signal <$xor0000> created at line 65.
+    Found 32-bit up counter for signal <rCnt>.
+    Found 32-bit up counter for signal <rStartUpCnt>.
+    Found 1-bit register for signal <rState>.
+    Found 1-bit register for signal <rState0>.
+    Found 1-bit register for signal <rState1>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred   3 D-type flip-flop(s).
+Unit <SquareWave> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x1-bit ROM                                           : 1
+# Counters                                             : 2
+ 32-bit up counter                                     : 2
+# Registers                                            : 3
+ 1-bit register                                        : 3
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file 'v300.nph' in environment C:\Xilinx.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x1-bit ROM                                           : 1
+# Counters                                             : 2
+ 32-bit up counter                                     : 2
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <SquareWave> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block SquareWave, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 67
+ Flip-Flops                                            : 67
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : SquareWave.ngr
+Top Level Output File Name         : SquareWave
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 4
+
+Cell Usage :
+# BELS                             : 290
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 62
+#      LUT2                        : 33
+#      LUT4                        : 50
+#      MUXCY                       : 78
+#      VCC                         : 1
+#      XORCY                       : 62
+# FlipFlops/Latches                : 67
+#      FD                          : 2
+#      FDC                         : 32
+#      FDCE                        : 33
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 3
+#      IBUF                        : 2
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : v300pq240-4 
+
+ Number of Slices:                      81  out of   3072     2%  
+ Number of Slice Flip Flops:            67  out of   6144     1%  
+ Number of 4 input LUTs:               148  out of   6144     2%  
+ Number of IOs:                          4
+ Number of bonded IOBs:                  4  out of    170     2%  
+ Number of GCLKs:                        1  out of      4    25%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+iClk                               | BUFGP                  | 67    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+iRst_n_inv(iRst_n_inv1_INV_0:O)    | NONE(rCnt_8)           | 65    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 15.036ns (Maximum Frequency: 66.507MHz)
+   Minimum input arrival time before clock: 3.019ns
+   Maximum output required time after clock: 8.289ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'iClk'
+  Clock period: 15.036ns (frequency: 66.507MHz)
+  Total number of paths / destination ports: 5349 / 99
+-------------------------------------------------------------------------
+Delay:               15.036ns (Levels of Logic = 10)
+  Source:            rCnt_8 (FF)
+  Destination:       rCnt_0 (FF)
+  Source Clock:      iClk rising
+  Destination Clock: iClk rising
+
+  Data Path: rCnt_8 to rCnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   1.372   1.474  rCnt_8 (rCnt_8)
+     LUT4:I0->O            1   0.738   0.000  _cmp_eq0001_wg_lut<0> (N9)
+     MUXCY:S->O            1   0.842   0.000  _cmp_eq0001_wg_cy<0> (_cmp_eq0001_wg_cy<0>)
+     MUXCY:CI->O           1   0.057   0.000  _cmp_eq0001_wg_cy<1> (_cmp_eq0001_wg_cy<1>)
+     MUXCY:CI->O           1   0.057   0.000  _cmp_eq0001_wg_cy<2> (_cmp_eq0001_wg_cy<2>)
+     MUXCY:CI->O           1   0.057   0.000  _cmp_eq0001_wg_cy<3> (_cmp_eq0001_wg_cy<3>)
+     MUXCY:CI->O           1   0.057   0.000  _cmp_eq0001_wg_cy<4> (_cmp_eq0001_wg_cy<4>)
+     MUXCY:CI->O           1   0.057   0.000  _cmp_eq0001_wg_cy<5> (_cmp_eq0001_wg_cy<5>)
+     MUXCY:CI->O           1   0.057   0.000  _cmp_eq0001_wg_cy<6> (_cmp_eq0001_wg_cy<6>)
+     MUXCY:CI->O          35   0.057   4.345  _cmp_eq0001_wg_cy<7> (_cmp_eq0001_wg_cy<7>)
+     LUT2:I0->O           32   0.738   4.180  _not00031 (_not0003)
+     FDCE:CE                   0.948          rCnt_0
+    ----------------------------------------
+    Total                     15.036ns (5.037ns logic, 9.999ns route)
+                                       (33.5% logic, 66.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'iClk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.019ns (Levels of Logic = 1)
+  Source:            isquareWave (PAD)
+  Destination:       rState0 (FF)
+  Destination Clock: iClk rising
+
+  Data Path: isquareWave to rState0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.989   1.265  isquareWave_IBUF (isquareWave_IBUF)
+     FD:D                      0.765          rState0
+    ----------------------------------------
+    Total                      3.019ns (1.754ns logic, 1.265ns route)
+                                       (58.1% logic, 41.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'iClk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              8.289ns (Levels of Logic = 1)
+  Source:            rState (FF)
+  Destination:       oState_n (PAD)
+  Source Clock:      iClk rising
+
+  Data Path: rState to oState_n
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   1.372   1.265  rState (rState)
+     OBUF:I->O                 5.652          oState_n_OBUF (oState_n)
+    ----------------------------------------
+    Total                      8.289ns (7.024ns logic, 1.265ns route)
+                                       (84.7% logic, 15.3% route)
+
+=========================================================================
+CPU : 4.05 / 4.35 s | Elapsed : 4.00 / 5.00 s
+ 
+--> 
+
+Total memory usage is 175872 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

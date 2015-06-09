@@ -1,0 +1,3 @@
+MODULE test
+SUBMODULE dual_ram
+INSTANCE UUT

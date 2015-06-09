@@ -1,0 +1,30 @@
+//! **************************************************************************
+// Written by: Map I.31 on Thu Apr 09 10:52:04 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "iClk" LOCATE = SITE "P89" LEVEL 1;
+COMP "oState_n" LOCATE = SITE "P231" LEVEL 1;
+COMP "isquareWave" LOCATE = SITE "P230" LEVEL 1;
+TIMEGRP iClk = BEL "rState0" BEL "rState" BEL "rState1" BEL "rCnt_0" BEL
+        "rCnt_1" BEL "rCnt_2" BEL "rCnt_3" BEL "rCnt_4" BEL "rCnt_5" BEL
+        "rCnt_6" BEL "rCnt_7" BEL "rCnt_8" BEL "rCnt_9" BEL "rCnt_10" BEL
+        "rCnt_11" BEL "rCnt_12" BEL "rCnt_13" BEL "rCnt_14" BEL "rCnt_15" BEL
+        "rCnt_16" BEL "rCnt_17" BEL "rCnt_18" BEL "rCnt_19" BEL "rCnt_20" BEL
+        "rCnt_21" BEL "rCnt_22" BEL "rCnt_23" BEL "rCnt_24" BEL "rCnt_25" BEL
+        "rCnt_26" BEL "rCnt_27" BEL "rCnt_28" BEL "rCnt_29" BEL "rCnt_30" BEL
+        "rCnt_31" BEL "rStartUpCnt_0" BEL "rStartUpCnt_1" BEL "rStartUpCnt_2"
+        BEL "rStartUpCnt_3" BEL "rStartUpCnt_4" BEL "rStartUpCnt_5" BEL
+        "rStartUpCnt_6" BEL "rStartUpCnt_7" BEL "rStartUpCnt_8" BEL
+        "rStartUpCnt_9" BEL "rStartUpCnt_10" BEL "rStartUpCnt_11" BEL
+        "rStartUpCnt_12" BEL "rStartUpCnt_13" BEL "rStartUpCnt_14" BEL
+        "rStartUpCnt_15" BEL "rStartUpCnt_16" BEL "rStartUpCnt_17" BEL
+        "rStartUpCnt_18" BEL "rStartUpCnt_19" BEL "rStartUpCnt_20" BEL
+        "rStartUpCnt_21" BEL "rStartUpCnt_22" BEL "rStartUpCnt_23" BEL
+        "rStartUpCnt_24" BEL "rStartUpCnt_25" BEL "rStartUpCnt_26" BEL
+        "rStartUpCnt_27" BEL "rStartUpCnt_28" BEL "rStartUpCnt_29" BEL
+        "rStartUpCnt_30" BEL "rStartUpCnt_31";
+TS_iClk = PERIOD TIMEGRP "iClk" 20 ns HIGH 50%;
+OFFSET = IN 20 ns BEFORE COMP "iClk";
+OFFSET = OUT 20 ns AFTER COMP "iClk";
+SCHEMATIC END;

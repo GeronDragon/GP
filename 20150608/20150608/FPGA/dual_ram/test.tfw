@@ -1,0 +1,174 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.2i
+//  \   \         Application : ISE
+//  /   /         Filename : test.tfw
+// /___/   /\     Timestamp : Tue Jun 09 18:02:05 2015
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: test
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module test;
+    reg clk = 1'b0;
+    reg xzcs6_a = 1'b0;
+    reg xzcs6_b = 1'b0;
+    reg [9:0] addr_a = 10'b0000000000;
+    reg [15:0] data_a$inout$reg = 16'b0000000000000000;
+    wire [15:0] data_a = data_a$inout$reg;
+    reg [9:0] addr_b = 10'b0000000000;
+    reg [15:0] data_b$inout$reg = 16'b0000000000000000;
+    wire [15:0] data_b = data_b$inout$reg;
+    reg we_a = 1'b0;
+    reg we_b = 1'b0;
+    reg rd_a = 1'b0;
+    reg rd_b = 1'b0;
+    wire oled1;
+    wire oled2;
+    wire oled3;
+    reg squarewave_a = 1'b0;
+    wire state_a;
+    wire xint2_b;
+    reg iRst_n = 1'b0;
+    wire iRst_a;
+
+    parameter PERIOD = 2000;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 0;
+
+    initial    // Clock process for clk
+    begin
+        #OFFSET;
+        forever
+        begin
+            clk = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) clk = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    dual_ram UUT (
+        .clk(clk),
+        .xzcs6_a(xzcs6_a),
+        .xzcs6_b(xzcs6_b),
+        .addr_a(addr_a),
+        .data_a(data_a),
+        .addr_b(addr_b),
+        .data_b(data_b),
+        .we_a(we_a),
+        .we_b(we_b),
+        .rd_a(rd_a),
+        .rd_b(rd_b),
+        .oled1(oled1),
+        .oled2(oled2),
+        .oled3(oled3),
+        .squarewave_a(squarewave_a),
+        .state_a(state_a),
+        .xint2_b(xint2_b),
+        .iRst_n(iRst_n),
+        .iRst_a(iRst_a));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin  // Open the results file...
+        TX_FILE = $fopen("results.txt");
+        #2.0002e+007 // Final time:  2.0002e+007 ns
+        if (TX_ERROR == 0) begin
+            $display("No errors or warnings.");
+            $fdisplay(TX_FILE, "No errors or warnings.");
+        end else begin
+            $display("%d errors found in simulation.", TX_ERROR);
+            $fdisplay(TX_FILE, "%d errors found in simulation.", TX_ERROR);
+        end
+        $fclose(TX_FILE);
+        $stop;
+    end
+
+    initial begin
+    end
+
+    task CHECK_oled1;
+        input NEXT_oled1;
+
+        #0 begin
+            if (NEXT_oled1 !== oled1) begin
+                $display("Error at time=%dns oled1=%b, expected=%b", $time, oled1, NEXT_oled1);
+                $fdisplay(TX_FILE, "Error at time=%dns oled1=%b, expected=%b", $time, oled1, NEXT_oled1);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+    task CHECK_oled2;
+        input NEXT_oled2;
+
+        #0 begin
+            if (NEXT_oled2 !== oled2) begin
+                $display("Error at time=%dns oled2=%b, expected=%b", $time, oled2, NEXT_oled2);
+                $fdisplay(TX_FILE, "Error at time=%dns oled2=%b, expected=%b", $time, oled2, NEXT_oled2);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+    task CHECK_oled3;
+        input NEXT_oled3;
+
+        #0 begin
+            if (NEXT_oled3 !== oled3) begin
+                $display("Error at time=%dns oled3=%b, expected=%b", $time, oled3, NEXT_oled3);
+                $fdisplay(TX_FILE, "Error at time=%dns oled3=%b, expected=%b", $time, oled3, NEXT_oled3);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+    task CHECK_state_a;
+        input NEXT_state_a;
+
+        #0 begin
+            if (NEXT_state_a !== state_a) begin
+                $display("Error at time=%dns state_a=%b, expected=%b", $time, state_a, NEXT_state_a);
+                $fdisplay(TX_FILE, "Error at time=%dns state_a=%b, expected=%b", $time, state_a, NEXT_state_a);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+    task CHECK_xint2_b;
+        input NEXT_xint2_b;
+
+        #0 begin
+            if (NEXT_xint2_b !== xint2_b) begin
+                $display("Error at time=%dns xint2_b=%b, expected=%b", $time, xint2_b, NEXT_xint2_b);
+                $fdisplay(TX_FILE, "Error at time=%dns xint2_b=%b, expected=%b", $time, xint2_b, NEXT_xint2_b);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+    task CHECK_iRst_a;
+        input NEXT_iRst_a;
+
+        #0 begin
+            if (NEXT_iRst_a !== iRst_a) begin
+                $display("Error at time=%dns iRst_a=%b, expected=%b", $time, iRst_a, NEXT_iRst_a);
+                $fdisplay(TX_FILE, "Error at time=%dns iRst_a=%b, expected=%b", $time, iRst_a, NEXT_iRst_a);
+                $fflush(TX_FILE);
+                TX_ERROR = TX_ERROR + 1;
+            end
+        end
+    endtask
+
+endmodule
+

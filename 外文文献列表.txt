@@ -1,0 +1,35 @@
+08
+An Analytical Redundancy-Based Fault Detection and Isolation Algorithm for a Road-Wheel Control Subsystem in a Steer-By-Wire System
+
+09
+A Dual Mode Redundant Approach for Microprocessor Soft Error Hardness
+
+16
+Tolerating transient faults in MARS
+
+23
+Ef?cient Built-In Redundancy Analysis for Embedded Memories With 2-D Redundancy
+
+24
+A Highly Efficient Redundancy Scheme Self-Purging Redundancy
+
+25
+Redundancy Concepts to Increase Transmission Reliability in Wireless Industrial LANs
+
+30
+Active-Redundancy Allocation in Systems
+
+33
+Redundancy Mining for Soft Error Detection in Multicore Processors
+
+34
+A Joint Redundancy and Imperfect Maintenance Strategy Optimization for Multi-State Systems
+
+35
+A Hardware Redundancy Reconfiguration Scheme for Tolerating Multiple Module Failures
+
+36
+Serial Communication Circuit with Optimized Skew Characteristics
+
+37
+Introductory UART Experiments for a Microcomputer Course

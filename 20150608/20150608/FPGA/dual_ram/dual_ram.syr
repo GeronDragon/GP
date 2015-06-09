@@ -1,0 +1,589 @@
+Release 8.2i - xst I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.07 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.07 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: dual_ram.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "dual_ram.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "dual_ram"
+Output Format                      : NGC
+Target Device                      : xcv300-4-pq240
+
+---- Source Options
+Top Module Name                    : dual_ram
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : lut
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+Add Generic Clock Buffer(BUFG)     : 4
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : dual_ram.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+tristate2logic                     : Yes
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "SquareWave.v" in library work
+Compiling verilog file "squareWaveDetect.v" in library work
+Module <squareWave> compiled
+Compiling verilog file "dual_ram_core.v" in library work
+Module <squareWaveDetect> compiled
+Compiling verilog file "dual_ram.v" in library work
+Module <dual_ram_core> compiled
+Module <dual_ram> compiled
+No errors in compilation
+Analysis of file <"dual_ram.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <dual_ram> in library <work>.
+
+Analyzing hierarchy for module <squareWaveDetect> in library <work>.
+
+Analyzing hierarchy for module <squareWave> in library <work> with parameters.
+	CRAZY_TIME = "00000000000000001010111111001000"
+	START_TIME = "00000000000000000111010100110000"
+
+Building hierarchy successfully finished.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <dual_ram>.
+Module <dual_ram> is correct for synthesis.
+ 
+    Set user-defined property "FPGA_DONT_TOUCH =  true" for instance <mydualram> in unit <dual_ram>.
+WARNING:Xst:37 - Unknown property "FPGA_DONT_TOUCH".
+Analyzing module <squareWaveDetect> in library <work>.
+Module <squareWaveDetect> is correct for synthesis.
+ 
+Analyzing module <squareWave> in library <work>.
+	CRAZY_TIME = 32'sb00000000000000001010111111001000
+	START_TIME = 32'sb00000000000000000111010100110000
+Module <squareWave> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <squareWave>.
+    Related source file is "SquareWave.v".
+    Found 32-bit adder for signal <$addsub0000> created at line 80.
+    Found 32-bit 4-to-1 multiplexer for signal <$mux0000>.
+    Found 1-bit xor2 for signal <$xor0000> created at line 56.
+    Found 32-bit register for signal <rCnt>.
+    Found 32-bit up counter for signal <rStartUpCnt>.
+    Found 1-bit register for signal <rState>.
+    Found 1-bit register for signal <rState0>.
+    Found 1-bit register for signal <rState1>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  35 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 Multiplexer(s).
+Unit <squareWave> synthesized.
+
+
+Synthesizing Unit <squareWaveDetect>.
+    Related source file is "squareWaveDetect.v".
+Unit <squareWaveDetect> synthesized.
+
+
+Synthesizing Unit <dual_ram>.
+    Related source file is "dual_ram.v".
+WARNING:Xst:646 - Signal <rSt> is assigned but never used.
+    Register <xint2_b> equivalent to <rstswd_a> has been removed
+    Found 1-bit register for signal <oled1>.
+    Found 1-bit register for signal <oled2>.
+    Found 1-bit register for signal <oled3>.
+    Found 16-bit tristate buffer for signal <data_a>.
+    Found 16-bit tristate buffer for signal <data_b>.
+    Found 1-bit register for signal <iRst_a>.
+    Found 6-bit adder for signal <$addsub0000> created at line 286.
+    Found 6-bit adder carry out for signal <$addsub0001> created at line 281.
+    Found 7-bit comparator equal for signal <$cmp_eq0002> created at line 281.
+    Found 10-bit comparator equal for signal <$cmp_eq0036> created at line 229.
+    Found 10-bit comparator greatequal for signal <$cmp_ge0000> created at line 229.
+    Found 10-bit comparator greatequal for signal <$cmp_ge0001> created at line 229.
+    Found 7-bit comparator greatequal for signal <$cmp_ge0002> created at line 272.
+    Found 10-bit comparator greater for signal <$cmp_gt0000> created at line 218.
+    Found 10-bit comparator greater for signal <$cmp_gt0001> created at line 218.
+    Found 10-bit comparator greater for signal <$cmp_gt0002> created at line 223.
+    Found 10-bit comparator greater for signal <$cmp_gt0003> created at line 223.
+    Found 10-bit comparator greater for signal <$cmp_gt0004> created at line 229.
+    Found 10-bit comparator greater for signal <$cmp_gt0005> created at line 229.
+    Found 10-bit comparator lessequal for signal <$cmp_le0000> created at line 229.
+    Found 10-bit comparator lessequal for signal <$cmp_le0001> created at line 229.
+    Found 6-bit comparator lessequal for signal <$cmp_le0002> created at line 272.
+    Found 10-bit comparator less for signal <$cmp_lt0000> created at line 218.
+    Found 10-bit comparator less for signal <$cmp_lt0001> created at line 218.
+    Found 10-bit comparator less for signal <$cmp_lt0002> created at line 223.
+    Found 10-bit comparator less for signal <$cmp_lt0003> created at line 223.
+    Found 10-bit comparator less for signal <$cmp_lt0004> created at line 229.
+    Found 10-bit comparator less for signal <$cmp_lt0005> created at line 229.
+    Found 6-bit comparator less for signal <$cmp_lt0006> created at line 233.
+    Found 10-bit comparator not equal for signal <$cmp_ne0000> created at line 229.
+    Found 16-bit 32-to-1 multiplexer for signal <$COND_5>.
+    Found 16-bit 4-to-1 multiplexer for signal <$mux0000>.
+    Found 16-bit 4-to-1 multiplexer for signal <$mux0001>.
+    Found 10-bit 4-to-1 multiplexer for signal <$old_rTempaddr_1>.
+    Found 16-bit 4-to-1 multiplexer for signal <$old_rTempdata_2>.
+    Found 18-bit subtractor for signal <$sub0000> created at line 261.
+    Found 1-bit register for signal <cf>.
+    Found 18-bit up counter for signal <delaycounter>.
+    Found 1-bit register for signal <delayflag>.
+    Found 6-bit register for signal <rCount>.
+    Found 6-bit register for signal <rDatacount>.
+    Found 10-bit register for signal <rOldAddr>.
+    Found 16-bit register for signal <rOldData>.
+    Found 16-bit register for signal <rOldtempdata>.
+    Found 1-bit register for signal <rstswd_a>.
+    Found 10-bit register for signal <rTempaddr>.
+    Found 16-bit register for signal <rTempdata>.
+    Found 512-bit register for signal <stream>.
+INFO:Xst:738 - HDL ADVISOR - 512 flip-flops were inferred for signal <stream>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred   1 Counter(s).
+	inferred 599 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  22 Comparator(s).
+	inferred  74 Multiplexer(s).
+	inferred  32 Tristate(s).
+Unit <dual_ram> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 18-bit subtractor                                     : 1
+ 32-bit adder                                          : 1
+ 6-bit adder                                           : 1
+ 6-bit adder carry out                                 : 1
+# Counters                                             : 2
+ 18-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 50
+ 1-bit register                                        : 10
+ 10-bit register                                       : 2
+ 16-bit register                                       : 35
+ 32-bit register                                       : 1
+ 6-bit register                                        : 2
+# Comparators                                          : 22
+ 10-bit comparator equal                               : 1
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator greater                             : 6
+ 10-bit comparator less                                : 6
+ 10-bit comparator lessequal                           : 2
+ 10-bit comparator not equal                           : 1
+ 6-bit comparator less                                 : 1
+ 6-bit comparator lessequal                            : 1
+ 7-bit comparator equal                                : 1
+ 7-bit comparator greatequal                           : 1
+# Multiplexers                                         : 6
+ 10-bit 4-to-1 multiplexer                             : 1
+ 16-bit 32-to-1 multiplexer                            : 1
+ 16-bit 4-to-1 multiplexer                             : 3
+ 32-bit 4-to-1 multiplexer                             : 1
+# Tristates                                            : 2
+ 16-bit tristate buffer                                : 2
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file 'v300.nph' in environment C:\Xilinx.
+Reading module "dual_ram_core.ngo" ( "dual_ram_core.ngo" unchanged since last run )...
+Loading core <dual_ram_core> for timing and area information for instance <mydualram>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 18-bit subtractor                                     : 1
+ 32-bit adder                                          : 1
+ 6-bit adder                                           : 1
+ 6-bit adder carry out                                 : 1
+# Counters                                             : 2
+ 18-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 634
+ Flip-Flops                                            : 634
+# Comparators                                          : 22
+ 10-bit comparator equal                               : 1
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator greater                             : 6
+ 10-bit comparator less                                : 6
+ 10-bit comparator lessequal                           : 2
+ 10-bit comparator not equal                           : 1
+ 6-bit comparator less                                 : 1
+ 6-bit comparator lessequal                            : 1
+ 7-bit comparator equal                                : 1
+ 7-bit comparator greatequal                           : 1
+# Multiplexers                                         : 6
+ 10-bit 4-to-1 multiplexer                             : 1
+ 16-bit 32-to-1 multiplexer                            : 1
+ 16-bit 4-to-1 multiplexer                             : 3
+ 32-bit 4-to-1 multiplexer                             : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1988 - Unit <dual_ram>: instances <Mcompar__cmp_ne0000>, <Mcompar__cmp_eq0036> of unit <LPM_COMPARE_6> and unit <LPM_COMPARE_7> are dual, second instance is removed
+WARNING:Xst:1988 - Unit <dual_ram>: instances <Mcompar__cmp_gt0004>, <Mcompar__cmp_le0000> of unit <LPM_COMPARE_2> and unit <LPM_COMPARE_8> are dual, second instance is removed
+WARNING:Xst:1988 - Unit <dual_ram>: instances <Mcompar__cmp_lt0004>, <Mcompar__cmp_ge0000> of unit <LPM_COMPARE_3> and unit <LPM_COMPARE_9> are dual, second instance is removed
+WARNING:Xst:1988 - Unit <dual_ram>: instances <Mcompar__cmp_gt0005>, <Mcompar__cmp_le0001> of unit <LPM_COMPARE_4> and unit <LPM_COMPARE_10> are dual, second instance is removed
+WARNING:Xst:1988 - Unit <dual_ram>: instances <Mcompar__cmp_lt0005>, <Mcompar__cmp_ge0001> of unit <LPM_COMPARE_5> and unit <LPM_COMPARE_11> are dual, second instance is removed
+
+Optimizing unit <dual_ram> ...
+
+Optimizing unit <squareWave> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block dual_ram, actual ratio is 23.
+FlipFlop rCount_0 has been replicated 5 time(s)
+FlipFlop rCount_1 has been replicated 1 time(s)
+FlipFlop rCount_2 has been replicated 1 time(s)
+FlipFlop rCount_3 has been replicated 1 time(s)
+FlipFlop rCount_4 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 693
+ Flip-Flops                                            : 693
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+WARNING:Xst:616 - Invalid property "FPGA_DONT_TOUCH true": Did not attach to mydualram.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : dual_ram.ngr
+Top Level Output File Name         : dual_ram
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 67
+
+Cell Usage :
+# BELS                             : 1840
+#      GND                         : 2
+#      INV                         : 12
+#      LUT1                        : 79
+#      LUT2                        : 69
+#      LUT2_D                      : 7
+#      LUT3                        : 230
+#      LUT3_D                      : 8
+#      LUT3_L                      : 4
+#      LUT4                        : 867
+#      LUT4_D                      : 78
+#      LUT4_L                      : 10
+#      MULT_AND                    : 5
+#      MUXCY                       : 139
+#      MUXF5                       : 180
+#      MUXF6                       : 52
+#      VCC                         : 1
+#      XORCY                       : 97
+# FlipFlops/Latches                : 693
+#      FD                          : 2
+#      FDC                         : 43
+#      FDCE                        : 389
+#      FDE                         : 257
+#      FDPE                        : 2
+# RAMS                             : 4
+#      RAMB4_S4_S4                 : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 66
+#      IBUF                        : 28
+#      IOBUF                       : 32
+#      OBUF                        : 6
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : v300pq240-4 
+
+ Number of Slices:                     753  out of   3072    24%  
+ Number of Slice Flip Flops:           693  out of   6144    11%  
+ Number of 4 input LUTs:              1364  out of   6144    22%  
+ Number of IOs:                         67
+ Number of bonded IOBs:                 67  out of    170    39%  
+ Number of BRAMs:                        4  out of     16    25%  
+ Number of GCLKs:                        1  out of      4    25%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------+------------------------+-------+
+Clock Signal                          | Clock buffer(FF name)  | Load  |
+--------------------------------------+------------------------+-------+
+clk                                   | BUFGP                  | 696   |
+squareWave_inst/squareWave_inst/rState| NONE(delayflag)        | 1     |
+--------------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------------------------------+---------------------------------------------+-------+
+Control Signal                                                                                 | Buffer(FF name)                             | Load  |
+-----------------------------------------------------------------------------------------------+---------------------------------------------+-------+
+iRst_n_inv1_INV_0_3(iRst_n_inv1_INV_0_3:O)                                                     | NONE(rTempdata_12)                          | 92    |
+iRst_n_inv(iRst_n_inv1_INV_0:O)                                                                | NONE(rOldData_10)                           | 93    |
+iRst_n_inv1_INV_0_1(iRst_n_inv1_INV_0_1:O)                                                     | NONE(stream_8_13)                           | 92    |
+squareWave_inst/squareWave_inst/iRst_n_inv(squareWave_inst/squareWave_inst/iRst_n_inv1_INV_0:O)| NONE(squareWave_inst/squareWave_inst/rCnt_8)| 65    |
+iRst_n_inv1_INV_0_2(iRst_n_inv1_INV_0_2:O)                                                     | NONE(stream_1_10)                           | 92    |
+-----------------------------------------------------------------------------------------------+---------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 30.906ns (Maximum Frequency: 32.356MHz)
+   Minimum input arrival time before clock: 50.090ns
+   Maximum output required time after clock: 10.954ns
+   Maximum combinational path delay: 12.682ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 30.906ns (frequency: 32.356MHz)
+  Total number of paths / destination ports: 176729 / 1286
+-------------------------------------------------------------------------
+Delay:               30.906ns (Levels of Logic = 14)
+  Source:            rTempdata_2 (FF)
+  Destination:       oled3 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: rTempdata_2 to oled3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             9   1.372   2.332  rTempdata_2 (rTempdata_2)
+     LUT2:I0->O            2   0.738   1.474  Madd__addsub0001_xor<4>1121 (N761)
+     LUT4_D:I3->LO         1   0.738   0.100  _and0003104 (N3210)
+     LUT4:I3->O           18   0.738   3.300  _and0003147 (_and0003_map414)
+     LUT4:I1->O           59   0.738   5.665  _old_rCount_4<1>1_2 (_old_rCount_4<1>11)
+     LUT4:I0->O            2   0.738   1.474  _mux0005<6>1 (_mux0005<6>)
+     LUT3:I2->O            1   0.738   0.000  _old_rCount_4<0>201 (N226)
+     MUXF5:I0->O           1   0.562   0.000  _old_rCount_4<1>_f5_99 (_old_rCount_4<1>_f5100)
+     MUXF6:I1->O           1   0.307   1.265  _old_rCount_4<2>_f6_49 (_old_rCount_4<2>_f650)
+     LUT3:I0->O            1   0.738   0.000  _not00132_wg_lut<3>_SW0_F (N3125)
+     MUXF5:I0->O           1   0.562   1.265  _not00132_wg_lut<3>_SW0 (N2285)
+     LUT4:I1->O            1   0.738   0.000  _not00132_wg_lut<3> (N1231)
+     MUXCY:S->O            1   0.842   0.000  _not00132_wg_cy<3> (_not00132_wg_cy<3>)
+     MUXCY:CI->O           2   0.057   1.474  _not00132_wg_cy<4> (_not00132_wg_cy<4>)
+     LUT2:I1->O            1   0.738   1.265  _not00131 (_not0013)
+     FDCE:CE                   0.948          oled3
+    ----------------------------------------
+    Total                     30.906ns (11.292ns logic, 19.614ns route)
+                                       (36.5% logic, 63.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1260995 / 1326
+-------------------------------------------------------------------------
+Offset:              50.090ns (Levels of Logic = 20)
+  Source:            addr_b<2> (PAD)
+  Destination:       oled3 (FF)
+  Destination Clock: clk rising
+
+  Data Path: addr_b<2> to oled3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   0.989   2.420  addr_b_2_IBUF (addr_b_2_IBUF)
+     LUT4:I0->O            1   0.738   0.000  _not00103422 (N3187)
+     MUXF5:I0->O           1   0.562   1.265  _not0010342_f5 (N1912)
+     LUT3:I0->O            3   0.738   1.628  _not0010370 (N1991)
+     LUT3:I2->O           79   0.738   6.765  _not0010387 (_and0006)
+     LUT4:I2->O            5   0.738   1.914  _and0003111 (N371)
+     LUT4:I1->O            1   0.738   1.265  _and0003219 (_and0003_map432)
+     LUT4:I2->O           17   0.738   3.190  _and0003246 (_and0003_map441)
+     MUXF5:S->O           42   0.820   4.730  _and0003163_SW0_f5 (N2336)
+     LUT4:I2->O           59   0.738   5.665  _old_rCount_4<1>1_2 (_old_rCount_4<1>11)
+     LUT4:I0->O            2   0.738   1.474  _mux0005<6>1 (_mux0005<6>)
+     LUT3:I2->O            1   0.738   0.000  _old_rCount_4<0>201 (N226)
+     MUXF5:I0->O           1   0.562   0.000  _old_rCount_4<1>_f5_99 (_old_rCount_4<1>_f5100)
+     MUXF6:I1->O           1   0.307   1.265  _old_rCount_4<2>_f6_49 (_old_rCount_4<2>_f650)
+     LUT3:I0->O            1   0.738   0.000  _not00132_wg_lut<3>_SW0_F (N3125)
+     MUXF5:I0->O           1   0.562   1.265  _not00132_wg_lut<3>_SW0 (N2285)
+     LUT4:I1->O            1   0.738   0.000  _not00132_wg_lut<3> (N1231)
+     MUXCY:S->O            1   0.842   0.000  _not00132_wg_cy<3> (_not00132_wg_cy<3>)
+     MUXCY:CI->O           2   0.057   1.474  _not00132_wg_cy<4> (_not00132_wg_cy<4>)
+     LUT2:I1->O            1   0.738   1.265  _not00131 (_not0013)
+     FDCE:CE                   0.948          oled3
+    ----------------------------------------
+    Total                     50.090ns (14.505ns logic, 35.585ns route)
+                                       (29.0% logic, 71.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 38 / 38
+-------------------------------------------------------------------------
+Offset:              10.954ns (Levels of Logic = 2)
+  Source:            mydualram/B22 (RAM)
+  Destination:       data_a<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: mydualram/B22 to data_a<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB4_S4_S4:CLKA->DOA3    1   4.037   1.265  B22 (douta<15>)
+     end scope: 'mydualram'
+     IOBUF:I->IO               5.652          data_a_15_IOBUF (data_a<15>)
+    ----------------------------------------
+    Total                     10.954ns (9.689ns logic, 1.265ns route)
+                                       (88.5% logic, 11.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 64 / 32
+-------------------------------------------------------------------------
+Delay:               12.682ns (Levels of Logic = 3)
+  Source:            xzcs6_a (PAD)
+  Destination:       data_a<15> (PAD)
+
+  Data Path: xzcs6_a to data_a<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.989   2.035  xzcs6_a_IBUF (xzcs6_a_IBUF)
+     LUT2:I1->O           16   0.738   3.080  _and0005_inv1 (_and0005_inv)
+     IOBUF:T->IO               5.840          data_a_1_IOBUF (data_a<1>)
+    ----------------------------------------
+    Total                     12.682ns (7.567ns logic, 5.115ns route)
+                                       (59.7% logic, 40.3% route)
+
+=========================================================================
+CPU : 25.42 / 25.50 s | Elapsed : 26.00 / 26.00 s
+ 
+--> 
+
+Total memory usage is 195904 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

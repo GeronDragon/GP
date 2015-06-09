@@ -1,0 +1,289 @@
+iMPACT Version: 
+iMPACT log file Started on Mon Jun 08 19:10:44 2015
+
+// *** BATCH CMD : setPreference -pref AutoSignature:FALSE
+// *** BATCH CMD : setPreference -pref KeepSVF:FALSE
+// *** BATCH CMD : setPreference -pref ConcurrentMode:FALSE
+// *** BATCH CMD : setPreference -pref UseHighz:FALSE
+// *** BATCH CMD : setPreference -pref UserLevel:NOVICE
+// *** BATCH CMD : setPreference -pref svfUseTime:FALSE
+// *** BATCH CMD : loadProjectFile -file"C:/GP/20150608/FPGA/dual_ram/dual_ram.ipf"
+'1': Loading file 'c:/gp/long/fpga/dual_ram/dual_ram.bit' ...
+done.
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/virtex/data/xcv300.bsd...
+WARNING:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the   bitstream stored in memory,
+   but the original bitstream file remains unchanged.
+INFO:iMPACT:501 - '1': Added Device xcv300 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/xc18v00/data/xc18v04.bsd...
+INFO:iMPACT:501 - '2': Added Device xc18v04 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+'2': Loading file 'c:/gp/code/20150514/fpga/dual_ram/dual_ram2.mcs' ...
+done.
+'1': Loading file 'C:/GP/code/20150514/FPGA/dual_ram/dual_ram.bit' ...
+INFO:iMPACT - Elapsed time =      1 sec.
+done.
+INFO:iMPACT:501 - '1': Added Device xcv300 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+'1': Added Device xc18v04 successfully.
+----------------------------------------------------------------------
+Active mode is PFF
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -pff
+------------------------  GUI: PFFView Wizard Data Report ------------------------
+SubMode: PFF_SERIAL
+MB Master Device: 
+MB Mode: 
+MB Chain: 
+getMultiBootSelected(): FALSE
+getSPISelected(): FALSE
+------------------------  GUI: End PFFView Report  ------------------------
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setCurrentDeviceChain -index 0
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : setCurrentDeviceChain -index 0
+// *** BATCH CMD : saveProjectFile -file"C:/GP/20150608/FPGA/dual_ram/dual_ram.ipf"
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 1
+----------------------------------------------------------------------
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : deletePromDevice -position 1
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : setCurrentDeviceChain -index 0
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : setCurrentDeviceChain -index 0
+// *** BATCH CMD : deleteDesign -version 0
+// *** BATCH CMD : setCurrentDesign -version -1
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+AutoDetecting cable. Please wait.
+PROGRESS_START - Starting Operation.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 7.0.0.0. LPT base address = 0378h.
+ ECP base address = FFFFFFFFh.
+Cable connection failed.
+Connecting to cable (Parallel Port - LPT2).
+Checking cable driver.
+ Driver windrvr6.sys version = 7.0.0.0.Cable connection failed.
+Connecting to cable (Parallel Port - LPT3).
+Checking cable driver.
+ Driver windrvr6.sys version = 7.0.0.0.Cable connection failed.
+Connecting to cable (Parallel Port - LPT4).
+Checking cable driver.
+ Driver windrvr6.sys version = 7.0.0.0.Cable connection failed.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver xusbdfwu.sys version: 1021 (1021).
+ Driver windrvr6.sys version = 7.0.0.0. Cable PID = 0008.
+ Max current requested during enumeration is 280 mA.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 1021.
+CPLD file version = 0012h.
+CPLD version = 0012h.
+PROGRESS_END - End Operation.
+Elapsed time =      5 sec.
+Attempting to identify devices in the boundary-scan chain configuration...// *** BATCH CMD : Identify 
+PROGRESS_START - Starting Operation.
+Identifying chain contents ....'1': : Manufacturer's ID =Xilinx xc18v04, Version : 0
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/xc18v00/data/xc18v04.bsd...
+INFO:iMPACT:501 - '1': Added Device xc18v04 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+'2': : Manufacturer's ID =Xilinx xcv300, Version : 8
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/virtex/data/xcv300.bsd...
+INFO:iMPACT:501 - '1': Added Device xcv300 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+done.
+Chain TCK freq = 2500000.
+Validating chain...
+Boundary-scan chain validated successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+// *** BATCH CMD : identifyMPM 
+// *** BATCH CMD : assignFile -p 1 -file"C:/GP/20150608/FPGA/dual_ram/dual_ram.bit"
+'1': Loading file 'C:/GP/20150608/FPGA/dual_ram/dual_ram.bit' ...
+done.
+WARNING:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the   bitstream stored in memory,
+   but the original bitstream file remains unchanged.
+INFO:iMPACT:501 - '1': Added Device xcv300 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+The following values are set for this run of the wizard
+SUBMODE_TYPE is SUBMODE_PFFSERIAL
+MULTIBOOT_DEVICE is DEVICE_NONE
+MULTIBOOT_TYPE is TYPE_NONE
+Downstream Daisy-Chain type is CHAINTYPE_NONE
+setMultiBootSelect is FALSE
+setSPISelect is FALSE
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addConfigDevice  -name "dual_ram2" -path"C:\GP\20150608\FPGA\dual_ram\"
+// *** BATCH CMD : setSubmode -pffserial
+// *** BATCH CMD : setAttribute -configdevice -attr multibootBpiType -value ""
+// *** BATCH CMD : addDesign -version 0 -name ""
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setAttribute -configdevice -attr compressed -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr compressed -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr autoSize -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr fileFormat -value "mcs"
+// *** BATCH CMD : setAttribute -configdevice -attr fillValue -value "FF"
+// *** BATCH CMD : setAttribute -configdevice -attr swapBit -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr dir -value "UP"
+// *** BATCH CMD : setAttribute -configdevice -attr multiboot -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr multiboot -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr spiSelected -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr spiSelected -value "FALSE"
+// *** BATCH CMD : addPromDevice -p 1 -size 0 -name xc18v04
+'1': Added Device xc18v04 successfully.
+----------------------------------------------------------------------
+// *** BATCH CMD : setMode -pff
+------------------------  GUI: PFFView Wizard Data Report ------------------------
+SubMode: PFF_SERIAL
+MB Master Device: 
+MB Mode: 
+MB Chain: 
+getMultiBootSelected(): FALSE
+getSPISelected(): FALSE
+------------------------  GUI: End PFFView Report  ------------------------
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : deletePromDevice -position 1
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : setCurrentDeviceChain -index 0
+// *** BATCH CMD : setCurrentDeviceChain -index 0
+// *** BATCH CMD : deleteDesign -version 0
+// *** BATCH CMD : setCurrentDesign -version -1
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addConfigDevice -size 512 -name "dual_ram2" -path"C:\GP\20150608\FPGA\dual_ram\/"
+// *** BATCH CMD : setSubmode -pffserial
+// *** BATCH CMD : setAttribute -configdevice -attr dir -value "UP"
+// *** BATCH CMD : addPromDevice -p 1 -size 0 -name xc18v04
+'1': Added Device xc18v04 successfully.
+----------------------------------------------------------------------
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setSubmode -pffserial
+// *** BATCH CMD : setAttribute -configdevice -attr dir -value "UP"
+// *** BATCH CMD : addDesign -version 0 -name "0000"
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : setCurrentDeviceChain -index 0
+------------------------  GUI: Wizard Data Report  ---------------------------
+      PROM Mode : Serial
+      Compression : false
+      Fill Value : FF
+      Output Format : mcs
+      Swap Bits : true
+      LoadDirection : UP
+      PROM Basename : dual_ram2
+      File Location : C:\GP\20150608\FPGA\dual_ram\/
+      Auto Selcet : false
+      Number of Data Stream : 1
+      Number of PROMs : 1
+      PROM Name : xc18v04		PROM Size : 524288 Bytes
+-------------------------- END of Report ----------------------------
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : setCurrentDeviceChain -index 0
+// *** BATCH CMD : setAttribute -design -attr name -value "0"
+// *** BATCH CMD : addDevice -p 1 -file"C:/GP/20150608/FPGA/dual_ram/dual_ram.bit"
+'1': Loading file 'C:/GP/20150608/FPGA/dual_ram/dual_ram.bit' ...
+INFO:iMPACT - Elapsed time =      0 sec.
+done.
+INFO:iMPACT:501 - '1': Added Device xcv300 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Add one device.// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setSubmode -pffserial
+// *** BATCH CMD : setAttribute -configdevice -attr fillValue -value "FF"
+// *** BATCH CMD : setAttribute -configdevice -attr fileFormat -value "mcs"
+// *** BATCH CMD : setAttribute -configdevice -attr dir -value "UP"
+// *** BATCH CMD : setAttribute -configdevice -attr path -value"C:\GP\20150608\FPGA\dual_ram\/"
+// *** BATCH CMD : setAttribute -configdevice -attr name -value "dual_ram2"
+// *** BATCH CMD : generate
+Swap bit can only be disabled in Hex file format only.
+Command:   -w -p mcs -c FF -o C:\GP\20150608\FPGA\dual_ram\//dual_ram2 -u 0C:/GP/20150608/FPGA/dual_ram/dual_ram.bit -x xc18v04 
+0x35760 (218976) bytes loaded up from 0x0
+Using user-specified prom size of 512K
+Writing file "C:\GP\20150608\FPGA\dual_ram\//dual_ram2.mcs".
+Writing file "C:\GP\20150608\FPGA\dual_ram\//dual_ram2.prm".
+Writing file "C:\GP\20150608\FPGA\dual_ram\//dual_ram2.sig".
+Total configuration bit size = 1751808 bits.Total configuration byte size = 218976 bytes.// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : assignFile -p 2 -file"C:/GP/20150608/FPGA/dual_ram/dual_ram2.mcs"
+'2': Loading file 'C:/GP/20150608/FPGA/dual_ram/dual_ram2.mcs' ...
+done.
+// *** BATCH CMD : setAttribute -position 2 -attr packageName -value "(null)"
+// *** BATCH CMD : Program -p 2 -e -v -defaultVersion 0 
+PROGRESS_START - Starting Operation.
+Chain TCK freq = 2500000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Calculated checksum matches expected checksum, 00584001a
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Setting user-programmable bits...
+done.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =     88 sec.
+// *** BATCH CMD : saveProjectFile -file"C:\GP\20150608\FPGA\dual_ram\default.ipf"
+// *** BATCH CMD : saveProjectFile -file"C:\GP\20150608\FPGA\dual_ram\default.ipf"
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -pff

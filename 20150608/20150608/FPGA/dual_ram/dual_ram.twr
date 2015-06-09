@@ -1,0 +1,684 @@
+--------------------------------------------------------------------------------
+Release 8.2i Trace 
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\bin\nt\trce.exe -ise
+C:/Users/Administrator/Desktop/20150525/FPGA/dual_ram/dual_ram.ise -intstyle
+ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf
+dual_ram.ucf
+
+Design file:              dual_ram.ncd
+Physical constraint file: dual_ram.pcf
+Device,speed:             xcv300,-4 (FINAL 1.123 2006-05-03)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+
+ 176729 items analyzed, 175 timing errors detected. (175 setup errors, 0 hold errors)
+ Minimum period is  35.698ns.
+--------------------------------------------------------------------------------
+Slack:                  -15.698ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               rOldtempdata_11 (FF)
+  Destination:          oled3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      35.698ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Data Path: rOldtempdata_11 to oled3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    CLB_R14C16.S1.XQ     Tcko                  1.372   rOldtempdata<11>
+                                                       rOldtempdata_11
+    CLB_R18C18.S1.G2     net (fanout=1)        2.247   rOldtempdata<11>
+    CLB_R18C18.S1.Y      Tilo                  0.738   _and0003_map455
+                                                       _and0003297
+    CLB_R14C24.S1.F2     net (fanout=1)        2.308   _and0003_map455
+    CLB_R14C24.S1.X      Tilo                  0.738   N21101
+                                                       _and0003360_SW0
+    CLB_R14C25.S0.G1     net (fanout=3)        1.020   N21101
+    CLB_R14C25.S0.Y      Tilo                  0.738   _and0003_map461
+                                                       _and0003360_1
+    CLB_R23C17.S1.F1     net (fanout=23)       4.159   _and0003360
+    CLB_R23C17.S1.X      Tilo                  0.738   stream_28_10
+                                                       _mux0037<2>121_11
+    CLB_R16C39.S1.G1     net (fanout=30)       5.475   _mux0037<2>1211
+    CLB_R16C39.S1.Y      Tilo                  0.738   stream_14_5
+                                                       _mux0014<4>1
+    CLB_R17C38.S1.F4     net (fanout=1)        1.162   _mux0014<4>
+    CLB_R17C38.S1.Y      Tif6y                 1.121   _old_rCount_4<2>_f643
+                                                       _old_rCount_4<0>172
+                                                       _old_rCount_4<1>_f5_85
+                                                       _old_rCount_4<2>_f6_42
+    CLB_R17C34.S0.F4     net (fanout=1)        1.558   _old_rCount_4<2>_f643
+    CLB_R17C34.S0.X      Tif5x                 0.911   N2285
+                                                       _not00132_wg_lut<3>_SW0_G
+                                                       _not00132_wg_lut<3>_SW0
+    CLB_R22C27.S0.G1     net (fanout=1)        2.748   N2285
+    CLB_R22C27.S0.COUT   Topcyg                1.580   _not00132_wg_cy<3>
+                                                       _not00132_wg_lut<3>
+                                                       _not00132_wg_cy<3>
+    CLB_R21C27.S0.CIN    net (fanout=1)        0.000   _not00132_wg_cy<3>
+    CLB_R21C27.S0.XB     Tcinxb                0.052   _not00132_wg_cy<4>
+                                                       _not00132_wg_cy<4>
+    CLB_R21C27.S1.F3     net (fanout=2)        1.089   _not00132_wg_cy<4>
+    CLB_R21C27.S1.X      Tilo                  0.738   _not0013
+                                                       _not00131
+    P95.OCE              net (fanout=1)        3.521   _not0013
+    P95.CLK              Tiooceck              0.947   oled3
+                                                       oled3
+    -------------------------------------------------  ---------------------------
+    Total                                     35.698ns (10.411ns logic, 25.287ns route)
+                                                       (29.2% logic, 70.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -15.695ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               rOldtempdata_11 (FF)
+  Destination:          oled3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      35.695ns (Levels of Logic = 11)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Data Path: rOldtempdata_11 to oled3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    CLB_R14C16.S1.XQ     Tcko                  1.372   rOldtempdata<11>
+                                                       rOldtempdata_11
+    CLB_R18C18.S1.G2     net (fanout=1)        2.247   rOldtempdata<11>
+    CLB_R18C18.S1.Y      Tilo                  0.738   _and0003_map455
+                                                       _and0003297
+    CLB_R14C24.S1.F2     net (fanout=1)        2.308   _and0003_map455
+    CLB_R14C24.S1.X      Tilo                  0.738   N21101
+                                                       _and0003360_SW0
+    CLB_R16C25.S0.G2     net (fanout=3)        1.642   N21101
+    CLB_R16C25.S0.Y      Tilo                  0.738   N351
+                                                       _and0003360_2
+    CLB_R27C19.S0.F2     net (fanout=17)       3.375   _and0003360_1
+    CLB_R27C19.S0.X      Tilo                  0.738   stream_24_2
+                                                       _old_rCount_4<1>1_5
+    CLB_R23C17.S0.G1     net (fanout=9)        2.668   _old_rCount_4<1>1_3
+    CLB_R23C17.S0.Y      Tilo                  0.738   stream_17_11
+                                                       _mux0017<10>1
+    CLB_R27C17.S0.G1     net (fanout=1)        2.003   _mux0017<10>
+    CLB_R27C17.S0.X      Tif5x                 1.300   _old_rCount_4<1>_f59
+                                                       _old_rCount_4<1>_f5_8_F
+                                                       _old_rCount_4<1>_f5_8
+    CLB_R29C17.S1.G2     net (fanout=1)        1.226   _old_rCount_4<1>_f59
+    CLB_R29C17.S1.X      Tif5x                 1.300   N2297
+                                                       _not00132_wg_lut<3>_SW1_SW0_F
+                                                       _not00132_wg_lut<3>_SW1_SW0
+    CLB_R29C24.S0.G2     net (fanout=1)        1.722   N2297
+    CLB_R29C24.S0.Y      Tilo                  0.738   N2286
+                                                       _not00132_wg_lut<3>_SW1
+    CLB_R22C27.S0.G4     net (fanout=1)        2.177   N2286
+    CLB_R22C27.S0.COUT   Topcyg                1.580   _not00132_wg_cy<3>
+                                                       _not00132_wg_lut<3>
+                                                       _not00132_wg_cy<3>
+    CLB_R21C27.S0.CIN    net (fanout=1)        0.000   _not00132_wg_cy<3>
+    CLB_R21C27.S0.XB     Tcinxb                0.052   _not00132_wg_cy<4>
+                                                       _not00132_wg_cy<4>
+    CLB_R21C27.S1.F3     net (fanout=2)        1.089   _not00132_wg_cy<4>
+    CLB_R21C27.S1.X      Tilo                  0.738   _not0013
+                                                       _not00131
+    P95.OCE              net (fanout=1)        3.521   _not0013
+    P95.CLK              Tiooceck              0.947   oled3
+                                                       oled3
+    -------------------------------------------------  ---------------------------
+    Total                                     35.695ns (11.717ns logic, 23.978ns route)
+                                                       (32.8% logic, 67.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -15.691ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               rOldtempdata_11 (FF)
+  Destination:          oled3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      35.691ns (Levels of Logic = 11)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Data Path: rOldtempdata_11 to oled3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    CLB_R14C16.S1.XQ     Tcko                  1.372   rOldtempdata<11>
+                                                       rOldtempdata_11
+    CLB_R18C18.S1.G2     net (fanout=1)        2.247   rOldtempdata<11>
+    CLB_R18C18.S1.Y      Tilo                  0.738   _and0003_map455
+                                                       _and0003297
+    CLB_R14C24.S1.F2     net (fanout=1)        2.308   _and0003_map455
+    CLB_R14C24.S1.X      Tilo                  0.738   N21101
+                                                       _and0003360_SW0
+    CLB_R14C25.S0.G1     net (fanout=3)        1.020   N21101
+    CLB_R14C25.S0.Y      Tilo                  0.738   _and0003_map461
+                                                       _and0003360_1
+    CLB_R24C24.S0.F1     net (fanout=23)       3.737   _and0003360
+    CLB_R24C24.S0.X      Tilo                  0.738   stream_19_13
+                                                       _mux0037<2>111_2
+    CLB_R14C37.S1.F2     net (fanout=28)       5.379   _mux0037<2>1111
+    CLB_R14C37.S1.X      Tilo                  0.738   stream_11_11
+                                                       _mux0011<11>1
+    CLB_R11C35.S0.F2     net (fanout=1)        1.770   _mux0011<11>
+    CLB_R11C35.S0.F5     Tif5                  0.814   _old_rCount_4<1>_f523
+                                                       _old_rCount_4<0>46
+                                                       _old_rCount_4<1>_f5_22
+    CLB_R11C35.S1.F5IN   net (fanout=1)        0.000   _old_rCount_4<1>_f523
+    CLB_R11C35.S1.Y      Tf5iny                0.412   _old_rCount_4<2>_f611
+                                                       _old_rCount_4<2>_f6_10
+    CLB_R11C29.S0.G2     net (fanout=1)        1.432   _old_rCount_4<2>_f611
+    CLB_R11C29.S0.Y      Tilo                  0.738   N53
+                                                       _old_rCount_4<3>5
+    CLB_R22C27.S0.F2     net (fanout=1)        2.980   N53
+    CLB_R22C27.S0.COUT   Topcyf                1.445   _not00132_wg_cy<3>
+                                                       _not00132_wg_lut<2>
+                                                       _not00132_wg_cy<2>
+                                                       _not00132_wg_cy<3>
+    CLB_R21C27.S0.CIN    net (fanout=1)        0.000   _not00132_wg_cy<3>
+    CLB_R21C27.S0.XB     Tcinxb                0.052   _not00132_wg_cy<4>
+                                                       _not00132_wg_cy<4>
+    CLB_R21C27.S1.F3     net (fanout=2)        1.089   _not00132_wg_cy<4>
+    CLB_R21C27.S1.X      Tilo                  0.738   _not0013
+                                                       _not00131
+    P95.OCE              net (fanout=1)        3.521   _not0013
+    P95.CLK              Tiooceck              0.947   oled3
+                                                       oled3
+    -------------------------------------------------  ---------------------------
+    Total                                     35.691ns (10.208ns logic, 25.483ns route)
+                                                       (28.6% logic, 71.4% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: OFFSET = IN 25 ns BEFORE COMP "clk";
+
+ 1260995 items analyzed, 842 timing errors detected. (842 setup errors, 0 hold errors)
+ Minimum allowable offset is  43.925ns.
+--------------------------------------------------------------------------------
+Slack:                  -18.925ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               addr_b<1> (PAD)
+  Destination:          oled3 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          25.000ns
+  Data Path Delay:      45.330ns (Levels of Logic = 17)
+  Clock Path Delay:     1.405ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Data Path: addr_b<1> to oled3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P126.I               Tiopi                 0.989   addr_b<1>
+                                                       addr_b<1>
+                                                       addr_b_1_IBUF
+    CLB_R11C19.S0.G1     net (fanout=10)       6.005   addr_b_1_IBUF
+    CLB_R11C19.S0.X      Tif5x                 1.300   N1912
+                                                       _not00103422
+                                                       _not0010342_f5
+    CLB_R13C19.S1.F3     net (fanout=1)        1.028   N1912
+    CLB_R13C19.S1.X      Tilo                  0.738   N1991
+                                                       _not0010370
+    CLB_R13C19.S1.G4     net (fanout=3)        0.050   N1991
+    CLB_R13C19.S1.Y      Tilo                  0.738   N1991
+                                                       _not0010387
+    CLB_R15C18.S1.F3     net (fanout=79)       2.003   _and0006
+    CLB_R15C18.S1.X      Tilo                  0.738   N371
+                                                       _and0003111
+    CLB_R15C19.S0.F2     net (fanout=5)        0.696   N371
+    CLB_R15C19.S0.X      Tilo                  0.738   _and0003_map432
+                                                       _and0003219
+    CLB_R15C19.S0.G4     net (fanout=1)        0.032   _and0003_map432
+    CLB_R15C19.S0.Y      Tilo                  0.738   _and0003_map432
+                                                       _and0003246
+    CLB_R18C25.S1.BX     net (fanout=17)       3.346   _and0003_map441
+    CLB_R18C25.S1.X      Tbxx                  0.820   N2336
+                                                       _and0003163_SW0_f5
+    CLB_R18C20.S1.G2     net (fanout=42)       1.984   N2336
+    CLB_R18C20.S1.Y      Tilo                  0.738   _and0003147_1
+                                                       _old_rCount_4<1>1_3
+    CLB_R19C29.S1.F2     net (fanout=9)        2.333   _old_rCount_4<1>1_1
+    CLB_R19C29.S1.X      Tilo                  0.738   stream_1_6
+                                                       _mux0036<4>1_SW0
+    CLB_R15C31.S1.G2     net (fanout=4)        2.269   N2306
+    CLB_R15C31.S1.Y      Tilo                  0.738   stream_1_5
+                                                       _mux0036<4>1
+    CLB_R16C35.S0.G2     net (fanout=1)        1.685   _mux0036<4>
+    CLB_R16C35.S0.F5     Tif5                  1.203   _old_rCount_4<1>_f585
+                                                       _old_rCount_4<0>171
+                                                       _old_rCount_4<1>_f5_84
+    CLB_R16C35.S1.F5IN   net (fanout=1)        0.000   _old_rCount_4<1>_f585
+    CLB_R16C35.S1.Y      Tf5iny                0.412   _old_rCount_4<2>_f642
+                                                       _old_rCount_4<2>_f6_41
+    CLB_R17C34.S0.G2     net (fanout=1)        1.296   _old_rCount_4<2>_f642
+    CLB_R17C34.S0.X      Tif5x                 1.300   N2285
+                                                       _not00132_wg_lut<3>_SW0_F
+                                                       _not00132_wg_lut<3>_SW0
+    CLB_R22C27.S0.G1     net (fanout=1)        2.748   N2285
+    CLB_R22C27.S0.COUT   Topcyg                1.580   _not00132_wg_cy<3>
+                                                       _not00132_wg_lut<3>
+                                                       _not00132_wg_cy<3>
+    CLB_R21C27.S0.CIN    net (fanout=1)        0.000   _not00132_wg_cy<3>
+    CLB_R21C27.S0.XB     Tcinxb                0.052   _not00132_wg_cy<4>
+                                                       _not00132_wg_cy<4>
+    CLB_R21C27.S1.F3     net (fanout=2)        1.089   _not00132_wg_cy<4>
+    CLB_R21C27.S1.X      Tilo                  0.738   _not0013
+                                                       _not00131
+    P95.OCE              net (fanout=1)        3.521   _not0013
+    P95.CLK              Tiooceck              0.947   oled3
+                                                       oled3
+    -------------------------------------------------  ---------------------------
+    Total                                     45.330ns (15.245ns logic, 30.085ns route)
+                                                       (33.6% logic, 66.4% route)
+
+  Clock Path: clk to oled3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P89.GCLKOUT          Tgpio                 0.502   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    GCLKBUF1.IN          net (fanout=1)        0.004   clk_BUFGP/IBUFG
+    GCLKBUF1.OUT         Tgio                  0.525   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    P95.CLK              net (fanout=442)      0.373   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.405ns (1.027ns logic, 0.378ns route)
+                                                       (73.1% logic, 26.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -18.918ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               addr_b<1> (PAD)
+  Destination:          oled3 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          25.000ns
+  Data Path Delay:      45.323ns (Levels of Logic = 16)
+  Clock Path Delay:     1.405ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Data Path: addr_b<1> to oled3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P126.I               Tiopi                 0.989   addr_b<1>
+                                                       addr_b<1>
+                                                       addr_b_1_IBUF
+    CLB_R11C19.S0.G1     net (fanout=10)       6.005   addr_b_1_IBUF
+    CLB_R11C19.S0.X      Tif5x                 1.300   N1912
+                                                       _not00103422
+                                                       _not0010342_f5
+    CLB_R13C19.S1.F3     net (fanout=1)        1.028   N1912
+    CLB_R13C19.S1.X      Tilo                  0.738   N1991
+                                                       _not0010370
+    CLB_R13C19.S1.G4     net (fanout=3)        0.050   N1991
+    CLB_R13C19.S1.Y      Tilo                  0.738   N1991
+                                                       _not0010387
+    CLB_R15C18.S1.F3     net (fanout=79)       2.003   _and0006
+    CLB_R15C18.S1.X      Tilo                  0.738   N371
+                                                       _and0003111
+    CLB_R15C19.S0.F2     net (fanout=5)        0.696   N371
+    CLB_R15C19.S0.X      Tilo                  0.738   _and0003_map432
+                                                       _and0003219
+    CLB_R15C19.S0.G4     net (fanout=1)        0.032   _and0003_map432
+    CLB_R15C19.S0.Y      Tilo                  0.738   _and0003_map432
+                                                       _and0003246
+    CLB_R18C25.S1.BX     net (fanout=17)       3.346   _and0003_map441
+    CLB_R18C25.S1.X      Tbxx                  0.820   N2336
+                                                       _and0003163_SW0_f5
+    CLB_R21C21.S0.F4     net (fanout=42)       2.594   N2336
+    CLB_R21C21.S0.X      Tilo                  0.738   stream_19_2
+                                                       _mux0037<2>111_3
+    CLB_R30C14.S0.G3     net (fanout=8)        2.496   _mux0037<2>111_1
+    CLB_R30C14.S0.Y      Tilo                  0.738   stream_27_3
+                                                       _mux0027<3>1
+    CLB_R27C20.S1.F1     net (fanout=1)        2.655   _mux0027<3>
+    CLB_R27C20.S1.X      Tif5x                 0.911   _old_rCount_4<1>_f575
+                                                       _old_rCount_4<1>_f5_74_G
+                                                       _old_rCount_4<1>_f5_74
+    CLB_R26C12.S1.G3     net (fanout=1)        1.808   _old_rCount_4<1>_f575
+    CLB_R26C12.S1.X      Tif5x                 1.300   N2292
+                                                       _not00132_wg_lut<2>_SW1_SW1_F
+                                                       _not00132_wg_lut<2>_SW1_SW1
+    CLB_R23C25.S0.G4     net (fanout=1)        2.324   N2292
+    CLB_R23C25.S0.Y      Tilo                  0.738   N521
+                                                       _not00132_wg_lut<2>_SW1
+    CLB_R22C27.S0.F3     net (fanout=1)        1.270   N2289
+    CLB_R22C27.S0.COUT   Topcyf                1.445   _not00132_wg_cy<3>
+                                                       _not00132_wg_lut<2>
+                                                       _not00132_wg_cy<2>
+                                                       _not00132_wg_cy<3>
+    CLB_R21C27.S0.CIN    net (fanout=1)        0.000   _not00132_wg_cy<3>
+    CLB_R21C27.S0.XB     Tcinxb                0.052   _not00132_wg_cy<4>
+                                                       _not00132_wg_cy<4>
+    CLB_R21C27.S1.F3     net (fanout=2)        1.089   _not00132_wg_cy<4>
+    CLB_R21C27.S1.X      Tilo                  0.738   _not0013
+                                                       _not00131
+    P95.OCE              net (fanout=1)        3.521   _not0013
+    P95.CLK              Tiooceck              0.947   oled3
+                                                       oled3
+    -------------------------------------------------  ---------------------------
+    Total                                     45.323ns (14.406ns logic, 30.917ns route)
+                                                       (31.8% logic, 68.2% route)
+
+  Clock Path: clk to oled3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P89.GCLKOUT          Tgpio                 0.502   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    GCLKBUF1.IN          net (fanout=1)        0.004   clk_BUFGP/IBUFG
+    GCLKBUF1.OUT         Tgio                  0.525   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    P95.CLK              net (fanout=442)      0.373   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.405ns (1.027ns logic, 0.378ns route)
+                                                       (73.1% logic, 26.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -18.834ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               addr_b<1> (PAD)
+  Destination:          oled3 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          25.000ns
+  Data Path Delay:      45.239ns (Levels of Logic = 15)
+  Clock Path Delay:     1.405ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Data Path: addr_b<1> to oled3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P126.I               Tiopi                 0.989   addr_b<1>
+                                                       addr_b<1>
+                                                       addr_b_1_IBUF
+    CLB_R11C19.S0.G1     net (fanout=10)       6.005   addr_b_1_IBUF
+    CLB_R11C19.S0.X      Tif5x                 1.300   N1912
+                                                       _not00103422
+                                                       _not0010342_f5
+    CLB_R13C19.S1.F3     net (fanout=1)        1.028   N1912
+    CLB_R13C19.S1.X      Tilo                  0.738   N1991
+                                                       _not0010370
+    CLB_R13C19.S1.G4     net (fanout=3)        0.050   N1991
+    CLB_R13C19.S1.Y      Tilo                  0.738   N1991
+                                                       _not0010387
+    CLB_R15C18.S1.F3     net (fanout=79)       2.003   _and0006
+    CLB_R15C18.S1.X      Tilo                  0.738   N371
+                                                       _and0003111
+    CLB_R15C19.S0.F2     net (fanout=5)        0.696   N371
+    CLB_R15C19.S0.X      Tilo                  0.738   _and0003_map432
+                                                       _and0003219
+    CLB_R15C19.S0.G4     net (fanout=1)        0.032   _and0003_map432
+    CLB_R15C19.S0.Y      Tilo                  0.738   _and0003_map432
+                                                       _and0003246
+    CLB_R18C25.S1.BX     net (fanout=17)       3.346   _and0003_map441
+    CLB_R18C25.S1.X      Tbxx                  0.820   N2336
+                                                       _and0003163_SW0_f5
+    CLB_R23C17.S1.F3     net (fanout=42)       2.902   N2336
+    CLB_R23C17.S1.X      Tilo                  0.738   stream_28_10
+                                                       _mux0037<2>121_11
+    CLB_R16C39.S1.G1     net (fanout=30)       5.475   _mux0037<2>1211
+    CLB_R16C39.S1.Y      Tilo                  0.738   stream_14_5
+                                                       _mux0014<4>1
+    CLB_R17C38.S1.F4     net (fanout=1)        1.162   _mux0014<4>
+    CLB_R17C38.S1.Y      Tif6y                 1.121   _old_rCount_4<2>_f643
+                                                       _old_rCount_4<0>172
+                                                       _old_rCount_4<1>_f5_85
+                                                       _old_rCount_4<2>_f6_42
+    CLB_R17C34.S0.F4     net (fanout=1)        1.558   _old_rCount_4<2>_f643
+    CLB_R17C34.S0.X      Tif5x                 0.911   N2285
+                                                       _not00132_wg_lut<3>_SW0_G
+                                                       _not00132_wg_lut<3>_SW0
+    CLB_R22C27.S0.G1     net (fanout=1)        2.748   N2285
+    CLB_R22C27.S0.COUT   Topcyg                1.580   _not00132_wg_cy<3>
+                                                       _not00132_wg_lut<3>
+                                                       _not00132_wg_cy<3>
+    CLB_R21C27.S0.CIN    net (fanout=1)        0.000   _not00132_wg_cy<3>
+    CLB_R21C27.S0.XB     Tcinxb                0.052   _not00132_wg_cy<4>
+                                                       _not00132_wg_cy<4>
+    CLB_R21C27.S1.F3     net (fanout=2)        1.089   _not00132_wg_cy<4>
+    CLB_R21C27.S1.X      Tilo                  0.738   _not0013
+                                                       _not00131
+    P95.OCE              net (fanout=1)        3.521   _not0013
+    P95.CLK              Tiooceck              0.947   oled3
+                                                       oled3
+    -------------------------------------------------  ---------------------------
+    Total                                     45.239ns (13.624ns logic, 31.615ns route)
+                                                       (30.1% logic, 69.9% route)
+
+  Clock Path: clk to oled3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P89.GCLKOUT          Tgpio                 0.502   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    GCLKBUF1.IN          net (fanout=1)        0.004   clk_BUFGP/IBUFG
+    GCLKBUF1.OUT         Tgio                  0.525   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG
+    P95.CLK              net (fanout=442)      0.373   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.405ns (1.027ns logic, 0.378ns route)
+                                                       (73.1% logic, 26.9% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: OFFSET = OUT 20 ns AFTER COMP "clk";
+
+ 38 items analyzed, 0 timing errors detected.
+ Minimum allowable offset is  18.140ns.
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+addr_a<0>   |   40.566(R)|    0.255(R)|clk_BUFGP         |   0.000|
+addr_a<1>   |   40.041(R)|    0.128(R)|clk_BUFGP         |   0.000|
+addr_a<2>   |   41.599(R)|   -0.188(R)|clk_BUFGP         |   0.000|
+addr_a<3>   |   40.140(R)|   -0.294(R)|clk_BUFGP         |   0.000|
+addr_a<4>   |   39.118(R)|   -0.210(R)|clk_BUFGP         |   0.000|
+addr_a<5>   |   39.905(R)|    0.227(R)|clk_BUFGP         |   0.000|
+addr_a<6>   |   39.954(R)|    0.131(R)|clk_BUFGP         |   0.000|
+addr_a<7>   |   39.635(R)|   -0.261(R)|clk_BUFGP         |   0.000|
+addr_a<8>   |   22.044(R)|   -0.212(R)|clk_BUFGP         |   0.000|
+addr_a<9>   |   38.861(R)|    0.174(R)|clk_BUFGP         |   0.000|
+addr_b<0>   |   43.024(R)|   -2.998(R)|clk_BUFGP         |   0.000|
+addr_b<1>   |   43.925(R)|   -2.859(R)|clk_BUFGP         |   0.000|
+addr_b<2>   |   42.862(R)|   -3.560(R)|clk_BUFGP         |   0.000|
+addr_b<3>   |   43.132(R)|   -2.475(R)|clk_BUFGP         |   0.000|
+addr_b<4>   |   42.213(R)|   -3.133(R)|clk_BUFGP         |   0.000|
+addr_b<5>   |   42.722(R)|   -2.455(R)|clk_BUFGP         |   0.000|
+addr_b<6>   |   41.762(R)|   -2.410(R)|clk_BUFGP         |   0.000|
+addr_b<7>   |   43.146(R)|   -2.121(R)|clk_BUFGP         |   0.000|
+addr_b<8>   |   22.890(R)|   -1.839(R)|clk_BUFGP         |   0.000|
+addr_b<9>   |   40.506(R)|   -2.004(R)|clk_BUFGP         |   0.000|
+data_a<0>   |   36.463(R)|   -0.883(R)|clk_BUFGP         |   0.000|
+data_a<1>   |   34.554(R)|   -0.633(R)|clk_BUFGP         |   0.000|
+data_a<2>   |   36.439(R)|   -0.860(R)|clk_BUFGP         |   0.000|
+data_a<3>   |   37.610(R)|   -0.611(R)|clk_BUFGP         |   0.000|
+data_a<4>   |   35.137(R)|   -0.866(R)|clk_BUFGP         |   0.000|
+data_a<5>   |   35.338(R)|   -0.528(R)|clk_BUFGP         |   0.000|
+data_a<6>   |   34.723(R)|   -0.629(R)|clk_BUFGP         |   0.000|
+data_a<7>   |   37.215(R)|   -0.628(R)|clk_BUFGP         |   0.000|
+data_a<8>   |   36.821(R)|   -1.615(R)|clk_BUFGP         |   0.000|
+data_a<9>   |   36.300(R)|   -0.852(R)|clk_BUFGP         |   0.000|
+data_a<10>  |   35.005(R)|   -0.814(R)|clk_BUFGP         |   0.000|
+data_a<11>  |   36.602(R)|   -1.756(R)|clk_BUFGP         |   0.000|
+data_a<12>  |   36.279(R)|   -0.680(R)|clk_BUFGP         |   0.000|
+data_a<13>  |   36.269(R)|   -1.781(R)|clk_BUFGP         |   0.000|
+data_a<14>  |   35.959(R)|   -1.407(R)|clk_BUFGP         |   0.000|
+data_a<15>  |   36.453(R)|   -0.899(R)|clk_BUFGP         |   0.000|
+data_b<0>   |   32.139(R)|   -2.357(R)|clk_BUFGP         |   0.000|
+data_b<1>   |   34.284(R)|   -1.330(R)|clk_BUFGP         |   0.000|
+data_b<2>   |   33.804(R)|   -1.317(R)|clk_BUFGP         |   0.000|
+data_b<3>   |   33.102(R)|   -1.829(R)|clk_BUFGP         |   0.000|
+data_b<4>   |   32.837(R)|   -2.002(R)|clk_BUFGP         |   0.000|
+data_b<5>   |   35.299(R)|   -1.722(R)|clk_BUFGP         |   0.000|
+data_b<6>   |   33.960(R)|   -1.321(R)|clk_BUFGP         |   0.000|
+data_b<7>   |   32.793(R)|   -1.784(R)|clk_BUFGP         |   0.000|
+data_b<8>   |   32.541(R)|   -1.169(R)|clk_BUFGP         |   0.000|
+data_b<9>   |   33.706(R)|   -0.873(R)|clk_BUFGP         |   0.000|
+data_b<10>  |   34.771(R)|   -0.721(R)|clk_BUFGP         |   0.000|
+data_b<11>  |   33.076(R)|   -0.759(R)|clk_BUFGP         |   0.000|
+data_b<12>  |   33.621(R)|   -2.281(R)|clk_BUFGP         |   0.000|
+data_b<13>  |   38.023(R)|   -2.547(R)|clk_BUFGP         |   0.000|
+data_b<14>  |   34.824(R)|   -2.025(R)|clk_BUFGP         |   0.000|
+data_b<15>  |   32.058(R)|   -1.239(R)|clk_BUFGP         |   0.000|
+iRst_n      |   17.049(R)|   -4.762(R)|clk_BUFGP         |   0.000|
+squarewave_a|    3.200(R)|    0.000(R)|clk_BUFGP         |   0.000|
+we_a        |   38.476(R)|   -2.358(R)|clk_BUFGP         |   0.000|
+we_b        |   38.850(R)|   -2.552(R)|clk_BUFGP         |   0.000|
+xzcs6_a     |   36.056(R)|   -1.413(R)|clk_BUFGP         |   0.000|
+xzcs6_b     |   37.721(R)|   -1.875(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+data_a<0>   |   16.096(R)|clk_BUFGP         |   0.000|
+data_a<1>   |   15.100(R)|clk_BUFGP         |   0.000|
+data_a<2>   |   15.120(R)|clk_BUFGP         |   0.000|
+data_a<3>   |   15.590(R)|clk_BUFGP         |   0.000|
+data_a<4>   |   15.372(R)|clk_BUFGP         |   0.000|
+data_a<5>   |   15.480(R)|clk_BUFGP         |   0.000|
+data_a<6>   |   15.119(R)|clk_BUFGP         |   0.000|
+data_a<7>   |   15.589(R)|clk_BUFGP         |   0.000|
+data_a<8>   |   18.140(R)|clk_BUFGP         |   0.000|
+data_a<9>   |   17.127(R)|clk_BUFGP         |   0.000|
+data_a<10>  |   17.278(R)|clk_BUFGP         |   0.000|
+data_a<11>  |   17.407(R)|clk_BUFGP         |   0.000|
+data_a<12>  |   15.675(R)|clk_BUFGP         |   0.000|
+data_a<13>  |   15.659(R)|clk_BUFGP         |   0.000|
+data_a<14>  |   17.184(R)|clk_BUFGP         |   0.000|
+data_a<15>  |   15.659(R)|clk_BUFGP         |   0.000|
+data_b<0>   |   15.200(R)|clk_BUFGP         |   0.000|
+data_b<1>   |   15.200(R)|clk_BUFGP         |   0.000|
+data_b<2>   |   15.381(R)|clk_BUFGP         |   0.000|
+data_b<3>   |   15.429(R)|clk_BUFGP         |   0.000|
+data_b<4>   |   16.499(R)|clk_BUFGP         |   0.000|
+data_b<5>   |   16.216(R)|clk_BUFGP         |   0.000|
+data_b<6>   |   15.863(R)|clk_BUFGP         |   0.000|
+data_b<7>   |   16.795(R)|clk_BUFGP         |   0.000|
+data_b<8>   |   15.923(R)|clk_BUFGP         |   0.000|
+data_b<9>   |   15.869(R)|clk_BUFGP         |   0.000|
+data_b<10>  |   15.999(R)|clk_BUFGP         |   0.000|
+data_b<11>  |   16.074(R)|clk_BUFGP         |   0.000|
+data_b<12>  |   17.488(R)|clk_BUFGP         |   0.000|
+data_b<13>  |   16.811(R)|clk_BUFGP         |   0.000|
+data_b<14>  |   16.762(R)|clk_BUFGP         |   0.000|
+data_b<15>  |   17.063(R)|clk_BUFGP         |   0.000|
+iRst_a      |    7.997(R)|clk_BUFGP         |   0.000|
+oled1       |    7.982(R)|clk_BUFGP         |   0.000|
+oled2       |    7.989(R)|clk_BUFGP         |   0.000|
+oled3       |    7.992(R)|clk_BUFGP         |   0.000|
+state_a     |   14.755(R)|clk_BUFGP         |   0.000|
+xint2_b     |   13.045(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   35.698|         |         |         |
+---------------+---------+---------+---------+---------+
+
+OFFSET = OUT 20 ns AFTER COMP "clk";
+Largest slack: 12.018 ns; Smallest slack: 1.860 ns; Relative Skew: 10.158 ns; 
+-----------------------------------------------+-------------+-------------+
+PAD                                            |    Slack    |Relative Skew|
+-----------------------------------------------+-------------+-------------+
+data_a<0>                                      |        3.904|        8.114|
+data_a<1>                                      |        4.900|        7.118|
+data_a<2>                                      |        4.880|        7.138|
+data_a<3>                                      |        4.410|        7.608|
+data_a<4>                                      |        4.628|        7.390|
+data_a<5>                                      |        4.520|        7.498|
+data_a<6>                                      |        4.881|        7.137|
+data_a<7>                                      |        4.411|        7.607|
+data_a<8>                                      |        1.860|       10.158|
+data_a<9>                                      |        2.873|        9.145|
+data_a<10>                                     |        2.722|        9.296|
+data_a<11>                                     |        2.593|        9.425|
+data_a<12>                                     |        4.325|        7.693|
+data_a<13>                                     |        4.341|        7.677|
+data_a<14>                                     |        2.816|        9.202|
+data_a<15>                                     |        4.341|        7.677|
+data_b<0>                                      |        4.800|        7.218|
+data_b<1>                                      |        4.800|        7.218|
+data_b<2>                                      |        4.619|        7.399|
+data_b<3>                                      |        4.571|        7.447|
+data_b<4>                                      |        3.501|        8.517|
+data_b<5>                                      |        3.784|        8.234|
+data_b<6>                                      |        4.137|        7.881|
+data_b<7>                                      |        3.205|        8.813|
+data_b<8>                                      |        4.077|        7.941|
+data_b<9>                                      |        4.131|        7.887|
+data_b<10>                                     |        4.001|        8.017|
+data_b<11>                                     |        3.926|        8.092|
+data_b<12>                                     |        2.512|        9.506|
+data_b<13>                                     |        3.189|        8.829|
+data_b<14>                                     |        3.238|        8.780|
+data_b<15>                                     |        2.937|        9.081|
+iRst_a                                         |       12.003|        0.015|
+oled1                                          |       12.018|        0.000|
+oled2                                          |       12.011|        0.007|
+oled3                                          |       12.008|        0.010|
+state_a                                        |        5.245|        6.773|
+xint2_b                                        |        6.955|        5.063|
+-----------------------------------------------+-------------+-------------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 1017  Score: 2121459
+
+Constraints cover 1437762 paths, 0 nets, and 6173 connections
+
+Design statistics:
+   Minimum period:  35.698ns   (Maximum frequency:  28.013MHz)
+   Minimum input required time before clock:  43.925ns
+   Minimum output required time after clock:  18.140ns
+
+
+Analysis completed Sat Jun 06 21:08:39 2015
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 162 MB
+
+
+

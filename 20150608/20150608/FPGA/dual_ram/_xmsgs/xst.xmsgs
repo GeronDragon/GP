@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="37" delta="unknown" >Unknown property &quot;<arg fmt="%s" index="1">FPGA_DONT_TOUCH</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">rSt</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="info" file="Xst" num="738" delta="unknown" >HDL ADVISOR - <arg fmt="%d" index="1">512</arg> flip-flops were inferred for signal &lt;<arg fmt="%s" index="2">stream</arg>&gt;. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+</msg>
+
+<msg type="warning" file="Xst" num="1988" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">dual_ram</arg>&gt;: instances &lt;<arg fmt="%s" index="2">Mcompar__cmp_ne0000</arg>&gt;, &lt;<arg fmt="%s" index="3">Mcompar__cmp_eq0036</arg>&gt; of unit &lt;<arg fmt="%s" index="4">LPM_COMPARE_6</arg>&gt; and unit &lt;<arg fmt="%s" index="5">LPM_COMPARE_7</arg>&gt; are dual, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1988" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">dual_ram</arg>&gt;: instances &lt;<arg fmt="%s" index="2">Mcompar__cmp_gt0004</arg>&gt;, &lt;<arg fmt="%s" index="3">Mcompar__cmp_le0000</arg>&gt; of unit &lt;<arg fmt="%s" index="4">LPM_COMPARE_2</arg>&gt; and unit &lt;<arg fmt="%s" index="5">LPM_COMPARE_8</arg>&gt; are dual, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1988" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">dual_ram</arg>&gt;: instances &lt;<arg fmt="%s" index="2">Mcompar__cmp_lt0004</arg>&gt;, &lt;<arg fmt="%s" index="3">Mcompar__cmp_ge0000</arg>&gt; of unit &lt;<arg fmt="%s" index="4">LPM_COMPARE_3</arg>&gt; and unit &lt;<arg fmt="%s" index="5">LPM_COMPARE_9</arg>&gt; are dual, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1988" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">dual_ram</arg>&gt;: instances &lt;<arg fmt="%s" index="2">Mcompar__cmp_gt0005</arg>&gt;, &lt;<arg fmt="%s" index="3">Mcompar__cmp_le0001</arg>&gt; of unit &lt;<arg fmt="%s" index="4">LPM_COMPARE_4</arg>&gt; and unit &lt;<arg fmt="%s" index="5">LPM_COMPARE_10</arg>&gt; are dual, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1988" delta="unknown" >Unit &lt;<arg fmt="%s" index="1">dual_ram</arg>&gt;: instances &lt;<arg fmt="%s" index="2">Mcompar__cmp_lt0005</arg>&gt;, &lt;<arg fmt="%s" index="3">Mcompar__cmp_ge0001</arg>&gt; of unit &lt;<arg fmt="%s" index="4">LPM_COMPARE_5</arg>&gt; and unit &lt;<arg fmt="%s" index="5">LPM_COMPARE_11</arg>&gt; are dual, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="616" delta="unknown" >Invalid property &quot;<arg fmt="%s" index="1">FPGA_DONT_TOUCH</arg> <arg fmt="%s" index="2">true</arg>&quot;: Did not attach to <arg fmt="%s" index="3">mydualram</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="unknown" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>

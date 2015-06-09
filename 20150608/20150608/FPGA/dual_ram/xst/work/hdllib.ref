@@ -1,0 +1,5 @@
+MO SquareWave NULL SquareWave.v vlg60/_square_wave.bin 1432382661
+MO dual_ram NULL dual_ram.v vlg49/dual__ram.bin 1433595899
+MO squareWave NULL SquareWave.v vlg00/square_wave.bin 1433595899
+MO squareWaveDetect NULL squareWaveDetect.v vlg0D/square_wave_detect.bin 1433595899
+MO dual_ram_core NULL dual_ram_core.v vlg59/dual__ram__core.bin 1433595899

@@ -1,0 +1,52 @@
+# Reading C:/modeltech_10.0a/tcl/vsim/pref.tcl 
+# //  ModelSim SE 10.0a Feb 20 2011 
+# //
+# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do aa.fdo 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE vlog 10.0a Compiler 2011.02 Feb 20 2011
+# -- Compiling module dual_ram_core
+# 
+# Top level modules:
+# 	dual_ram_core
+# Model Technology ModelSim SE vlog 10.0a Compiler 2011.02 Feb 20 2011
+# -- Compiling module SquareWave
+# 
+# Top level modules:
+# 	SquareWave
+# Model Technology ModelSim SE vlog 10.0a Compiler 2011.02 Feb 20 2011
+# -- Compiling module dual_ram
+# 
+# Top level modules:
+# 	dual_ram
+# Model Technology ModelSim SE vlog 10.0a Compiler 2011.02 Feb 20 2011
+# -- Compiling module aa
+# 
+# Top level modules:
+# 	aa
+# Model Technology ModelSim SE vlog 10.0a Compiler 2011.02 Feb 20 2011
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# vsim -L xilinxcorelib_ver -L unisims_ver -lib work -t 1ps aa glbl 
+# Loading work.aa
+# Loading work.dual_ram
+# Loading work.dual_ram_core
+# Loading xilinxcorelib_ver.BLKMEMDP_V6_3
+# Loading work.SquareWave
+# Loading work.glbl
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# Error at time=             7095050ns oled1=0, expected=1
+#           1 errors found in simulation.
+# Break in Module aa at aa.tfw line 85
+# Simulation Breakpoint: Break in Module aa at aa.tfw line 85
+# MACRO ./aa.fdo PAUSED at line 17

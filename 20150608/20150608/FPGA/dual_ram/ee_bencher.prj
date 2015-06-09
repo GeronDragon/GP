@@ -1,0 +1,4 @@
+verilog work "dual_ram_core.v"
+verilog work "SquareWave.v"
+verilog work "dual_ram.v"
+verilog work C:/Xilinx/verilog/src/glbl.v

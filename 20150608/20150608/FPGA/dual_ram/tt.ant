@@ -1,0 +1,124 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.2i
+//  \   \         Application : ISE
+//  /   /         Filename : tt.ant
+// /___/   /\     Timestamp : Sun Apr 12 10:27:59 2015
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: tt
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module tt;
+    reg clk = 1'b0;
+    reg xzcs6_a = 1'b1;
+    reg xzcs6_b = 1'b1;
+    reg [9:0] addr_a = 10'b0000000000;
+    reg [15:0] data_a$inout$reg = 16'bZZZZZZZZZZZZZZZZ;
+    wire [15:0] data_a = data_a$inout$reg;
+    reg [9:0] addr_b = 10'b0000000000;
+    reg [15:0] data_b$inout$reg = 16'bZZZZZZZZZZZZZZZZ;
+    wire [15:0] data_b = data_b$inout$reg;
+    reg we_a = 1'b1;
+    reg we_b = 1'b1;
+    reg rd_a = 1'b1;
+    reg rd_b = 1'b1;
+
+    parameter PERIOD = 200;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 0;
+
+    initial    // Clock process for clk
+    begin
+        #OFFSET;
+        forever
+        begin
+            clk = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) clk = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    dual_ram UUT (
+        .clk(clk),
+        .xzcs6_a(xzcs6_a),
+        .xzcs6_b(xzcs6_b),
+        .addr_a(addr_a),
+        .data_a(data_a),
+        .addr_b(addr_b),
+        .data_b(data_b),
+        .we_a(we_a),
+        .we_b(we_b),
+        .rd_a(rd_a),
+        .rd_b(rd_b));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("C:\\GP\\long\\FPGA\\dual_ram\\tt.ano");
+        #3200 // Final time:  3200 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  285ns
+        #285;
+        xzcs6_a = 1'b0;
+        we_a = 1'b0;
+        addr_a = 10'b0000000001;
+        xzcs6_a = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  485ns
+        #200;
+        we_a = 1'b1;
+        addr_a = 10'b0000000010;
+        xzcs6_b = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  685ns
+        #200;
+        rd_b = 1'b0;
+        addr_b = 10'b0000000001;
+        // -------------------------------------
+        // -------------  Current Time:  885ns
+        #200;
+        xzcs6_b = 1'b1;
+        rd_b = 1'b1;
+        addr_b = 10'b0000000010;
+        // -------------------------------------
+        // -------------  Current Time:  1285ns
+        #400;
+        xzcs6_b = 1'b0;
+        we_b = 1'b0;
+        xzcs6_b = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  1485ns
+        #200;
+        we_b = 1'b1;
+        xzcs6_a = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  1685ns
+        #200;
+        rd_a = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  1885ns
+        #200;
+        xzcs6_a = 1'b1;
+        rd_a = 1'b1;
+        // -------------------------------------
+    end
+
+endmodule
+

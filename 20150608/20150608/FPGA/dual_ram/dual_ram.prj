@@ -1,0 +1,4 @@
+verilog work "SquareWave.v"
+verilog work "squareWaveDetect.v"
+verilog work "dual_ram_core.v"
+verilog work "dual_ram.v"

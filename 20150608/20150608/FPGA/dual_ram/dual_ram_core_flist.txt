@@ -1,0 +1,10 @@
+# Output products list for <dual_ram_core>
+dual_ram_core.asy
+dual_ram_core.edn
+dual_ram_core.sym
+dual_ram_core.v
+dual_ram_core.veo
+dual_ram_core.vhd
+dual_ram_core.vho
+dual_ram_core.xco
+dual_ram_core_flist.txt

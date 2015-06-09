@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RootFolder label="COREGEN" treetype="folder" language="COREGEN">
+	<Folder label="VERILOG Component Instantiation" treetype="folder">
+		<Template label="dual_ram_core" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+dual_ram_core YourInstanceName (
+    .addra(addra),
+    .addrb(addrb),
+    .clka(clka),
+    .clkb(clkb),
+    .dina(dina),
+    .dinb(dinb),
+    .douta(douta),
+    .doutb(doutb),
+    .ena(ena),
+    .enb(enb),
+    .wea(wea),
+    .web(web));
+
+ 
+		</Template>
+	</Folder>
+	<Folder label="VHDL Component Instantiation" treetype="folder">
+		<Template label="dual_ram_core" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component dual_ram_core
+    port (
+    addra: IN std_logic_VECTOR(9 downto 0);
+    addrb: IN std_logic_VECTOR(9 downto 0);
+    clka: IN std_logic;
+    clkb: IN std_logic;
+    dina: IN std_logic_VECTOR(15 downto 0);
+    dinb: IN std_logic_VECTOR(15 downto 0);
+    douta: OUT std_logic_VECTOR(15 downto 0);
+    doutb: OUT std_logic_VECTOR(15 downto 0);
+    ena: IN std_logic;
+    enb: IN std_logic;
+    wea: IN std_logic;
+    web: IN std_logic);
+end component;
+
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : dual_ram_core
+        port map (
+            addra =&gt; addra,
+            addrb =&gt; addrb,
+            clka =&gt; clka,
+            clkb =&gt; clkb,
+            dina =&gt; dina,
+            dinb =&gt; dinb,
+            douta =&gt; douta,
+            doutb =&gt; doutb,
+            ena =&gt; ena,
+            enb =&gt; enb,
+            wea =&gt; wea,
+            web =&gt; web);
+ 
+		</Template>
+	</Folder>
+</RootFolder>

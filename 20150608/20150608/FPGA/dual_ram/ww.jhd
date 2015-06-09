@@ -1,0 +1,3 @@
+MODULE ww
+SUBMODULE dual_ram
+INSTANCE UUT

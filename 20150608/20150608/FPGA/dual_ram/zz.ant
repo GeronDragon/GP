@@ -1,0 +1,151 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.2i
+//  \   \         Application : ISE
+//  /   /         Filename : zz.ant
+// /___/   /\     Timestamp : Thu May 07 14:55:57 2015
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: zz
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module zz;
+    reg clk = 1'b0;
+    reg xzcs6_a = 1'b0;
+    reg xzcs6_b = 1'b0;
+    reg [9:0] addr_a = 10'b0000000000;
+    reg [15:0] data_a$inout$reg = 16'b0000000000000000;
+    wire [15:0] data_a = data_a$inout$reg;
+    reg [9:0] addr_b = 10'b0000000000;
+    reg [15:0] data_b$inout$reg = 16'b0000000000000000;
+    wire [15:0] data_b = data_b$inout$reg;
+    reg we_a = 1'b0;
+    reg we_b = 1'b0;
+    reg rd_a = 1'b0;
+    reg rd_b = 1'b0;
+    wire oled1;
+    wire oled2;
+    wire oled3;
+    reg squarewave_a = 1'b0;
+    wire state_a;
+    wire xint2_b;
+
+    parameter PERIOD = 1000;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 0;
+
+    initial    // Clock process for clk
+    begin
+        #OFFSET;
+        forever
+        begin
+            clk = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) clk = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    dual_ram UUT (
+        .clk(clk),
+        .xzcs6_a(xzcs6_a),
+        .xzcs6_b(xzcs6_b),
+        .addr_a(addr_a),
+        .data_a(data_a),
+        .addr_b(addr_b),
+        .data_b(data_b),
+        .we_a(we_a),
+        .we_b(we_b),
+        .rd_a(rd_a),
+        .rd_b(rd_b),
+        .oled1(oled1),
+        .oled2(oled2),
+        .oled3(oled3),
+        .squarewave_a(squarewave_a),
+        .state_a(state_a),
+        .xint2_b(xint2_b));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process for clock clk
+        #0;
+        ANNOTATE_oled1;
+        ANNOTATE_oled2;
+        ANNOTATE_oled3;
+        ANNOTATE_state_a;
+        ANNOTATE_xint2_b;
+        #OFFSET;
+        forever begin
+            #515;
+            ANNOTATE_oled1;
+            ANNOTATE_oled2;
+            ANNOTATE_oled3;
+            ANNOTATE_state_a;
+            ANNOTATE_xint2_b;
+            #485;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("F:\\20150506\\FPGA\\dual_ram\\zz.ano");
+        #2.001e+006 // Final time:  2.001e+006 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+    end
+
+    task ANNOTATE_oled1;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,oled1,%b]", $time, oled1);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_oled2;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,oled2,%b]", $time, oled2);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_oled3;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,oled3,%b]", $time, oled3);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_state_a;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,state_a,%b]", $time, state_a);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_xint2_b;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,xint2_b,%b]", $time, xint2_b);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

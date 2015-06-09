@@ -1,0 +1,330 @@
+//! **************************************************************************
+// Written by: Map I.31 on Sat Jun 06 21:07:12 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "xint2_b" LOCATE = SITE "P206" LEVEL 1;
+COMP "oled1" LOCATE = SITE "P93" LEVEL 1;
+COMP "oled2" LOCATE = SITE "P94" LEVEL 1;
+COMP "state_a" LOCATE = SITE "P96" LEVEL 1;
+COMP "oled3" LOCATE = SITE "P95" LEVEL 1;
+COMP "iRst_n" LOCATE = SITE "P237" LEVEL 1;
+COMP "iRst_a" LOCATE = SITE "P97" LEVEL 1;
+COMP "xzcs6_a" LOCATE = SITE "P84" LEVEL 1;
+COMP "xzcs6_b" LOCATE = SITE "P200" LEVEL 1;
+COMP "rd_a" LOCATE = SITE "P31" LEVEL 1;
+COMP "rd_b" LOCATE = SITE "P202" LEVEL 1;
+COMP "data_a<10>" LOCATE = SITE "P49" LEVEL 1;
+COMP "data_a<11>" LOCATE = SITE "P50" LEVEL 1;
+COMP "data_a<12>" LOCATE = SITE "P52" LEVEL 1;
+COMP "data_a<13>" LOCATE = SITE "P53" LEVEL 1;
+COMP "data_a<14>" LOCATE = SITE "P56" LEVEL 1;
+COMP "data_a<15>" LOCATE = SITE "P57" LEVEL 1;
+COMP "data_b<10>" LOCATE = SITE "P188" LEVEL 1;
+COMP "data_b<11>" LOCATE = SITE "P189" LEVEL 1;
+COMP "data_b<12>" LOCATE = SITE "P191" LEVEL 1;
+COMP "data_b<13>" LOCATE = SITE "P192" LEVEL 1;
+COMP "data_b<14>" LOCATE = SITE "P193" LEVEL 1;
+COMP "data_b<15>" LOCATE = SITE "P194" LEVEL 1;
+COMP "we_a" LOCATE = SITE "P48" LEVEL 1;
+COMP "we_b" LOCATE = SITE "P201" LEVEL 1;
+COMP "clk" LOCATE = SITE "P89" LEVEL 1;
+COMP "data_a<0>" LOCATE = SITE "P33" LEVEL 1;
+COMP "data_a<1>" LOCATE = SITE "P34" LEVEL 1;
+COMP "data_a<2>" LOCATE = SITE "P35" LEVEL 1;
+COMP "data_a<3>" LOCATE = SITE "P36" LEVEL 1;
+COMP "data_b<0>" LOCATE = SITE "P168" LEVEL 1;
+COMP "data_a<4>" LOCATE = SITE "P38" LEVEL 1;
+COMP "data_b<1>" LOCATE = SITE "P169" LEVEL 1;
+COMP "data_a<5>" LOCATE = SITE "P39" LEVEL 1;
+COMP "data_b<2>" LOCATE = SITE "P170" LEVEL 1;
+COMP "data_a<6>" LOCATE = SITE "P41" LEVEL 1;
+COMP "data_b<3>" LOCATE = SITE "P171" LEVEL 1;
+COMP "data_a<7>" LOCATE = SITE "P42" LEVEL 1;
+COMP "data_b<4>" LOCATE = SITE "P173" LEVEL 1;
+COMP "data_a<8>" LOCATE = SITE "P46" LEVEL 1;
+COMP "data_b<5>" LOCATE = SITE "P174" LEVEL 1;
+COMP "data_a<9>" LOCATE = SITE "P47" LEVEL 1;
+COMP "data_b<6>" LOCATE = SITE "P175" LEVEL 1;
+COMP "data_b<7>" LOCATE = SITE "P176" LEVEL 1;
+COMP "data_b<8>" LOCATE = SITE "P186" LEVEL 1;
+COMP "data_b<9>" LOCATE = SITE "P187" LEVEL 1;
+COMP "squarewave_a" LOCATE = SITE "P230" LEVEL 1;
+COMP "addr_a<0>" LOCATE = SITE "P3" LEVEL 1;
+COMP "addr_a<1>" LOCATE = SITE "P4" LEVEL 1;
+COMP "addr_a<2>" LOCATE = SITE "P5" LEVEL 1;
+COMP "addr_a<3>" LOCATE = SITE "P6" LEVEL 1;
+COMP "addr_b<0>" LOCATE = SITE "P125" LEVEL 1;
+COMP "addr_a<4>" LOCATE = SITE "P7" LEVEL 1;
+COMP "addr_b<1>" LOCATE = SITE "P126" LEVEL 1;
+COMP "addr_a<5>" LOCATE = SITE "P9" LEVEL 1;
+COMP "addr_b<2>" LOCATE = SITE "P127" LEVEL 1;
+COMP "addr_a<6>" LOCATE = SITE "P10" LEVEL 1;
+COMP "addr_b<3>" LOCATE = SITE "P128" LEVEL 1;
+COMP "addr_a<7>" LOCATE = SITE "P11" LEVEL 1;
+COMP "addr_b<4>" LOCATE = SITE "P130" LEVEL 1;
+COMP "addr_a<8>" LOCATE = SITE "P12" LEVEL 1;
+COMP "addr_b<5>" LOCATE = SITE "P131" LEVEL 1;
+COMP "addr_a<9>" LOCATE = SITE "P13" LEVEL 1;
+COMP "addr_b<6>" LOCATE = SITE "P132" LEVEL 1;
+COMP "addr_b<7>" LOCATE = SITE "P133" LEVEL 1;
+COMP "addr_b<8>" LOCATE = SITE "P139" LEVEL 1;
+COMP "addr_b<9>" LOCATE = SITE "P140" LEVEL 1;
+PIN mydualram/B10.A_pins<31> = BEL "mydualram/B10.A" PINNAME "31";
+PIN mydualram/B10.B_pins<31> = BEL "mydualram/B10.B" PINNAME "31";
+PIN mydualram/B14.A_pins<31> = BEL "mydualram/B14.A" PINNAME "31";
+PIN mydualram/B14.B_pins<31> = BEL "mydualram/B14.B" PINNAME "31";
+PIN mydualram/B18.A_pins<31> = BEL "mydualram/B18.A" PINNAME "31";
+PIN mydualram/B18.B_pins<31> = BEL "mydualram/B18.B" PINNAME "31";
+PIN mydualram/B22.A_pins<31> = BEL "mydualram/B22.A" PINNAME "31";
+PIN mydualram/B22.B_pins<31> = BEL "mydualram/B22.B" PINNAME "31";
+TIMEGRP clk = PIN "mydualram/B10.A_pins<31>" PIN "mydualram/B10.B_pins<31>"
+        PIN "mydualram/B14.A_pins<31>" PIN "mydualram/B14.B_pins<31>" PIN
+        "mydualram/B18.A_pins<31>" PIN "mydualram/B18.B_pins<31>" PIN
+        "mydualram/B22.A_pins<31>" PIN "mydualram/B22.B_pins<31>" BEL
+        "rstswd_a" BEL "cf" BEL "iRst_a" BEL "rTempdata_0" BEL "rTempdata_1"
+        BEL "rTempdata_2" BEL "rTempdata_3" BEL "rTempdata_4" BEL
+        "rTempdata_5" BEL "rTempdata_6" BEL "rTempdata_7" BEL "rTempdata_8"
+        BEL "rTempdata_9" BEL "rTempdata_10" BEL "rTempdata_11" BEL
+        "rTempdata_12" BEL "rTempdata_13" BEL "rTempdata_14" BEL
+        "rTempdata_15" BEL "oled3" BEL "oled1" BEL "oled2" BEL "stream_0_0"
+        BEL "stream_0_1" BEL "stream_0_2" BEL "stream_0_3" BEL "stream_0_4"
+        BEL "stream_0_5" BEL "stream_0_6" BEL "stream_0_7" BEL "stream_0_8"
+        BEL "stream_0_9" BEL "stream_0_10" BEL "stream_0_11" BEL "stream_0_12"
+        BEL "stream_0_13" BEL "stream_0_14" BEL "stream_0_15" BEL "stream_1_0"
+        BEL "stream_1_1" BEL "stream_1_2" BEL "stream_1_3" BEL "stream_1_4"
+        BEL "stream_1_5" BEL "stream_1_6" BEL "stream_1_7" BEL "stream_1_8"
+        BEL "stream_1_9" BEL "stream_1_10" BEL "stream_1_11" BEL "stream_1_12"
+        BEL "stream_1_13" BEL "stream_1_14" BEL "stream_1_15" BEL "stream_4_0"
+        BEL "stream_4_1" BEL "stream_4_2" BEL "stream_4_3" BEL "stream_4_4"
+        BEL "stream_4_5" BEL "stream_4_6" BEL "stream_4_7" BEL "stream_4_8"
+        BEL "stream_4_9" BEL "stream_4_10" BEL "stream_4_11" BEL "stream_4_12"
+        BEL "stream_4_13" BEL "stream_4_14" BEL "stream_4_15" BEL "stream_2_0"
+        BEL "stream_2_1" BEL "stream_2_2" BEL "stream_2_3" BEL "stream_2_4"
+        BEL "stream_2_5" BEL "stream_2_6" BEL "stream_2_7" BEL "stream_2_8"
+        BEL "stream_2_9" BEL "stream_2_10" BEL "stream_2_11" BEL "stream_2_12"
+        BEL "stream_2_13" BEL "stream_2_14" BEL "stream_2_15" BEL "stream_3_0"
+        BEL "stream_3_1" BEL "stream_3_2" BEL "stream_3_3" BEL "stream_3_4"
+        BEL "stream_3_5" BEL "stream_3_6" BEL "stream_3_7" BEL "stream_3_8"
+        BEL "stream_3_9" BEL "stream_3_10" BEL "stream_3_11" BEL "stream_3_12"
+        BEL "stream_3_13" BEL "stream_3_14" BEL "stream_3_15" BEL "stream_5_0"
+        BEL "stream_5_1" BEL "stream_5_2" BEL "stream_5_3" BEL "stream_5_4"
+        BEL "stream_5_5" BEL "stream_5_6" BEL "stream_5_7" BEL "stream_5_8"
+        BEL "stream_5_9" BEL "stream_5_10" BEL "stream_5_11" BEL "stream_5_12"
+        BEL "stream_5_13" BEL "stream_5_14" BEL "stream_5_15" BEL "stream_6_0"
+        BEL "stream_6_1" BEL "stream_6_2" BEL "stream_6_3" BEL "stream_6_4"
+        BEL "stream_6_5" BEL "stream_6_6" BEL "stream_6_7" BEL "stream_6_8"
+        BEL "stream_6_9" BEL "stream_6_10" BEL "stream_6_11" BEL "stream_6_12"
+        BEL "stream_6_13" BEL "stream_6_14" BEL "stream_6_15" BEL "stream_9_0"
+        BEL "stream_9_1" BEL "stream_9_2" BEL "stream_9_3" BEL "stream_9_4"
+        BEL "stream_9_5" BEL "stream_9_6" BEL "stream_9_7" BEL "stream_9_8"
+        BEL "stream_9_9" BEL "stream_9_10" BEL "stream_9_11" BEL "stream_9_12"
+        BEL "stream_9_13" BEL "stream_9_14" BEL "stream_9_15" BEL "stream_7_0"
+        BEL "stream_7_1" BEL "stream_7_2" BEL "stream_7_3" BEL "stream_7_4"
+        BEL "stream_7_5" BEL "stream_7_6" BEL "stream_7_7" BEL "stream_7_8"
+        BEL "stream_7_9" BEL "stream_7_10" BEL "stream_7_11" BEL "stream_7_12"
+        BEL "stream_7_13" BEL "stream_7_14" BEL "stream_7_15" BEL "stream_8_0"
+        BEL "stream_8_1" BEL "stream_8_2" BEL "stream_8_3" BEL "stream_8_4"
+        BEL "stream_8_5" BEL "stream_8_6" BEL "stream_8_7" BEL "stream_8_8"
+        BEL "stream_8_9" BEL "stream_8_10" BEL "stream_8_11" BEL "stream_8_12"
+        BEL "stream_8_13" BEL "stream_8_14" BEL "stream_8_15" BEL
+        "stream_10_0" BEL "stream_10_1" BEL "stream_10_2" BEL "stream_10_3"
+        BEL "stream_10_4" BEL "stream_10_5" BEL "stream_10_6" BEL
+        "stream_10_7" BEL "stream_10_8" BEL "stream_10_9" BEL "stream_10_10"
+        BEL "stream_10_11" BEL "stream_10_12" BEL "stream_10_13" BEL
+        "stream_10_14" BEL "stream_10_15" BEL "stream_11_0" BEL "stream_11_1"
+        BEL "stream_11_2" BEL "stream_11_3" BEL "stream_11_4" BEL
+        "stream_11_5" BEL "stream_11_6" BEL "stream_11_7" BEL "stream_11_8"
+        BEL "stream_11_9" BEL "stream_11_10" BEL "stream_11_11" BEL
+        "stream_11_12" BEL "stream_11_13" BEL "stream_11_14" BEL
+        "stream_11_15" BEL "stream_14_0" BEL "stream_14_1" BEL "stream_14_2"
+        BEL "stream_14_3" BEL "stream_14_4" BEL "stream_14_5" BEL
+        "stream_14_6" BEL "stream_14_7" BEL "stream_14_8" BEL "stream_14_9"
+        BEL "stream_14_10" BEL "stream_14_11" BEL "stream_14_12" BEL
+        "stream_14_13" BEL "stream_14_14" BEL "stream_14_15" BEL "stream_12_0"
+        BEL "stream_12_1" BEL "stream_12_2" BEL "stream_12_3" BEL
+        "stream_12_4" BEL "stream_12_5" BEL "stream_12_6" BEL "stream_12_7"
+        BEL "stream_12_8" BEL "stream_12_9" BEL "stream_12_10" BEL
+        "stream_12_11" BEL "stream_12_12" BEL "stream_12_13" BEL
+        "stream_12_14" BEL "stream_12_15" BEL "stream_13_0" BEL "stream_13_1"
+        BEL "stream_13_2" BEL "stream_13_3" BEL "stream_13_4" BEL
+        "stream_13_5" BEL "stream_13_6" BEL "stream_13_7" BEL "stream_13_8"
+        BEL "stream_13_9" BEL "stream_13_10" BEL "stream_13_11" BEL
+        "stream_13_12" BEL "stream_13_13" BEL "stream_13_14" BEL
+        "stream_13_15" BEL "stream_15_0" BEL "stream_15_1" BEL "stream_15_2"
+        BEL "stream_15_3" BEL "stream_15_4" BEL "stream_15_5" BEL
+        "stream_15_6" BEL "stream_15_7" BEL "stream_15_8" BEL "stream_15_9"
+        BEL "stream_15_10" BEL "stream_15_11" BEL "stream_15_12" BEL
+        "stream_15_13" BEL "stream_15_14" BEL "stream_15_15" BEL "stream_16_0"
+        BEL "stream_16_1" BEL "stream_16_2" BEL "stream_16_3" BEL
+        "stream_16_4" BEL "stream_16_5" BEL "stream_16_6" BEL "stream_16_7"
+        BEL "stream_16_8" BEL "stream_16_9" BEL "stream_16_10" BEL
+        "stream_16_11" BEL "stream_16_12" BEL "stream_16_13" BEL
+        "stream_16_14" BEL "stream_16_15" BEL "stream_19_0" BEL "stream_19_1"
+        BEL "stream_19_2" BEL "stream_19_3" BEL "stream_19_4" BEL
+        "stream_19_5" BEL "stream_19_6" BEL "stream_19_7" BEL "stream_19_8"
+        BEL "stream_19_9" BEL "stream_19_10" BEL "stream_19_11" BEL
+        "stream_19_12" BEL "stream_19_13" BEL "stream_19_14" BEL
+        "stream_19_15" BEL "stream_17_0" BEL "stream_17_1" BEL "stream_17_2"
+        BEL "stream_17_3" BEL "stream_17_4" BEL "stream_17_5" BEL
+        "stream_17_6" BEL "stream_17_7" BEL "stream_17_8" BEL "stream_17_9"
+        BEL "stream_17_10" BEL "stream_17_11" BEL "stream_17_12" BEL
+        "stream_17_13" BEL "stream_17_14" BEL "stream_17_15" BEL "stream_18_0"
+        BEL "stream_18_1" BEL "stream_18_2" BEL "stream_18_3" BEL
+        "stream_18_4" BEL "stream_18_5" BEL "stream_18_6" BEL "stream_18_7"
+        BEL "stream_18_8" BEL "stream_18_9" BEL "stream_18_10" BEL
+        "stream_18_11" BEL "stream_18_12" BEL "stream_18_13" BEL
+        "stream_18_14" BEL "stream_18_15" BEL "stream_20_0" BEL "stream_20_1"
+        BEL "stream_20_2" BEL "stream_20_3" BEL "stream_20_4" BEL
+        "stream_20_5" BEL "stream_20_6" BEL "stream_20_7" BEL "stream_20_8"
+        BEL "stream_20_9" BEL "stream_20_10" BEL "stream_20_11" BEL
+        "stream_20_12" BEL "stream_20_13" BEL "stream_20_14" BEL
+        "stream_20_15" BEL "stream_21_0" BEL "stream_21_1" BEL "stream_21_2"
+        BEL "stream_21_3" BEL "stream_21_4" BEL "stream_21_5" BEL
+        "stream_21_6" BEL "stream_21_7" BEL "stream_21_8" BEL "stream_21_9"
+        BEL "stream_21_10" BEL "stream_21_11" BEL "stream_21_12" BEL
+        "stream_21_13" BEL "stream_21_14" BEL "stream_21_15" BEL "stream_24_0"
+        BEL "stream_24_1" BEL "stream_24_2" BEL "stream_24_3" BEL
+        "stream_24_4" BEL "stream_24_5" BEL "stream_24_6" BEL "stream_24_7"
+        BEL "stream_24_8" BEL "stream_24_9" BEL "stream_24_10" BEL
+        "stream_24_11" BEL "stream_24_12" BEL "stream_24_13" BEL
+        "stream_24_14" BEL "stream_24_15" BEL "stream_22_0" BEL "stream_22_1"
+        BEL "stream_22_2" BEL "stream_22_3" BEL "stream_22_4" BEL
+        "stream_22_5" BEL "stream_22_6" BEL "stream_22_7" BEL "stream_22_8"
+        BEL "stream_22_9" BEL "stream_22_10" BEL "stream_22_11" BEL
+        "stream_22_12" BEL "stream_22_13" BEL "stream_22_14" BEL
+        "stream_22_15" BEL "stream_23_0" BEL "stream_23_1" BEL "stream_23_2"
+        BEL "stream_23_3" BEL "stream_23_4" BEL "stream_23_5" BEL
+        "stream_23_6" BEL "stream_23_7" BEL "stream_23_8" BEL "stream_23_9"
+        BEL "stream_23_10" BEL "stream_23_11" BEL "stream_23_12" BEL
+        "stream_23_13" BEL "stream_23_14" BEL "stream_23_15" BEL "stream_25_0"
+        BEL "stream_25_1" BEL "stream_25_2" BEL "stream_25_3" BEL
+        "stream_25_4" BEL "stream_25_5" BEL "stream_25_6" BEL "stream_25_7"
+        BEL "stream_25_8" BEL "stream_25_9" BEL "stream_25_10" BEL
+        "stream_25_11" BEL "stream_25_12" BEL "stream_25_13" BEL
+        "stream_25_14" BEL "stream_25_15" BEL "stream_26_0" BEL "stream_26_1"
+        BEL "stream_26_2" BEL "stream_26_3" BEL "stream_26_4" BEL
+        "stream_26_5" BEL "stream_26_6" BEL "stream_26_7" BEL "stream_26_8"
+        BEL "stream_26_9" BEL "stream_26_10" BEL "stream_26_11" BEL
+        "stream_26_12" BEL "stream_26_13" BEL "stream_26_14" BEL
+        "stream_26_15" BEL "stream_29_0" BEL "stream_29_1" BEL "stream_29_2"
+        BEL "stream_29_3" BEL "stream_29_4" BEL "stream_29_5" BEL
+        "stream_29_6" BEL "stream_29_7" BEL "stream_29_8" BEL "stream_29_9"
+        BEL "stream_29_10" BEL "stream_29_11" BEL "stream_29_12" BEL
+        "stream_29_13" BEL "stream_29_14" BEL "stream_29_15" BEL "stream_27_0"
+        BEL "stream_27_1" BEL "stream_27_2" BEL "stream_27_3" BEL
+        "stream_27_4" BEL "stream_27_5" BEL "stream_27_6" BEL "stream_27_7"
+        BEL "stream_27_8" BEL "stream_27_9" BEL "stream_27_10" BEL
+        "stream_27_11" BEL "stream_27_12" BEL "stream_27_13" BEL
+        "stream_27_14" BEL "stream_27_15" BEL "stream_28_0" BEL "stream_28_1"
+        BEL "stream_28_2" BEL "stream_28_3" BEL "stream_28_4" BEL
+        "stream_28_5" BEL "stream_28_6" BEL "stream_28_7" BEL "stream_28_8"
+        BEL "stream_28_9" BEL "stream_28_10" BEL "stream_28_11" BEL
+        "stream_28_12" BEL "stream_28_13" BEL "stream_28_14" BEL
+        "stream_28_15" BEL "stream_30_0" BEL "stream_30_1" BEL "stream_30_2"
+        BEL "stream_30_3" BEL "stream_30_4" BEL "stream_30_5" BEL
+        "stream_30_6" BEL "stream_30_7" BEL "stream_30_8" BEL "stream_30_9"
+        BEL "stream_30_10" BEL "stream_30_11" BEL "stream_30_12" BEL
+        "stream_30_13" BEL "stream_30_14" BEL "stream_30_15" BEL "stream_31_0"
+        BEL "stream_31_1" BEL "stream_31_2" BEL "stream_31_3" BEL
+        "stream_31_4" BEL "stream_31_5" BEL "stream_31_6" BEL "stream_31_7"
+        BEL "stream_31_8" BEL "stream_31_9" BEL "stream_31_10" BEL
+        "stream_31_11" BEL "stream_31_12" BEL "stream_31_13" BEL
+        "stream_31_14" BEL "stream_31_15" BEL "rCount_0" BEL "rCount_1" BEL
+        "rCount_2" BEL "rCount_3" BEL "rCount_4" BEL "rCount_5" BEL
+        "rDatacount_0" BEL "rDatacount_1" BEL "rDatacount_2" BEL
+        "rDatacount_3" BEL "rDatacount_4" BEL "rDatacount_5" BEL "rTempaddr_0"
+        BEL "rTempaddr_1" BEL "rTempaddr_2" BEL "rTempaddr_3" BEL
+        "rTempaddr_4" BEL "rTempaddr_5" BEL "rTempaddr_6" BEL "rTempaddr_7"
+        BEL "rTempaddr_8" BEL "rTempaddr_9" BEL "rOldAddr_0" BEL "rOldAddr_1"
+        BEL "rOldAddr_2" BEL "rOldAddr_3" BEL "rOldAddr_4" BEL "rOldAddr_5"
+        BEL "rOldAddr_6" BEL "rOldAddr_7" BEL "rOldAddr_8" BEL "rOldAddr_9"
+        BEL "rOldtempdata_0" BEL "rOldtempdata_1" BEL "rOldtempdata_2" BEL
+        "rOldtempdata_3" BEL "rOldtempdata_4" BEL "rOldtempdata_5" BEL
+        "rOldtempdata_6" BEL "rOldtempdata_7" BEL "rOldtempdata_8" BEL
+        "rOldtempdata_9" BEL "rOldtempdata_10" BEL "rOldtempdata_11" BEL
+        "rOldtempdata_12" BEL "rOldtempdata_13" BEL "rOldtempdata_14" BEL
+        "rOldtempdata_15" BEL "rOldData_0" BEL "rOldData_1" BEL "rOldData_2"
+        BEL "rOldData_3" BEL "rOldData_4" BEL "rOldData_5" BEL "rOldData_6"
+        BEL "rOldData_7" BEL "rOldData_8" BEL "rOldData_9" BEL "rOldData_10"
+        BEL "rOldData_11" BEL "rOldData_12" BEL "rOldData_13" BEL
+        "rOldData_14" BEL "rOldData_15" BEL "delaycounter_0" BEL
+        "delaycounter_1" BEL "delaycounter_2" BEL "delaycounter_3" BEL
+        "delaycounter_4" BEL "delaycounter_5" BEL "delaycounter_6" BEL
+        "delaycounter_7" BEL "delaycounter_8" BEL "delaycounter_9" BEL
+        "delaycounter_10" BEL "delaycounter_11" BEL "delaycounter_12" BEL
+        "delaycounter_13" BEL "delaycounter_14" BEL "delaycounter_15" BEL
+        "delaycounter_16" BEL "delaycounter_17" BEL
+        "squareWave_inst/squareWave_inst/rState0" BEL
+        "squareWave_inst/squareWave_inst/rState" BEL
+        "squareWave_inst/squareWave_inst/rState1" BEL
+        "squareWave_inst/squareWave_inst/rCnt_0" BEL
+        "squareWave_inst/squareWave_inst/rCnt_1" BEL
+        "squareWave_inst/squareWave_inst/rCnt_2" BEL
+        "squareWave_inst/squareWave_inst/rCnt_3" BEL
+        "squareWave_inst/squareWave_inst/rCnt_4" BEL
+        "squareWave_inst/squareWave_inst/rCnt_5" BEL
+        "squareWave_inst/squareWave_inst/rCnt_6" BEL
+        "squareWave_inst/squareWave_inst/rCnt_7" BEL
+        "squareWave_inst/squareWave_inst/rCnt_8" BEL
+        "squareWave_inst/squareWave_inst/rCnt_9" BEL
+        "squareWave_inst/squareWave_inst/rCnt_10" BEL
+        "squareWave_inst/squareWave_inst/rCnt_11" BEL
+        "squareWave_inst/squareWave_inst/rCnt_12" BEL
+        "squareWave_inst/squareWave_inst/rCnt_13" BEL
+        "squareWave_inst/squareWave_inst/rCnt_14" BEL
+        "squareWave_inst/squareWave_inst/rCnt_15" BEL
+        "squareWave_inst/squareWave_inst/rCnt_16" BEL
+        "squareWave_inst/squareWave_inst/rCnt_17" BEL
+        "squareWave_inst/squareWave_inst/rCnt_18" BEL
+        "squareWave_inst/squareWave_inst/rCnt_19" BEL
+        "squareWave_inst/squareWave_inst/rCnt_20" BEL
+        "squareWave_inst/squareWave_inst/rCnt_21" BEL
+        "squareWave_inst/squareWave_inst/rCnt_22" BEL
+        "squareWave_inst/squareWave_inst/rCnt_23" BEL
+        "squareWave_inst/squareWave_inst/rCnt_24" BEL
+        "squareWave_inst/squareWave_inst/rCnt_25" BEL
+        "squareWave_inst/squareWave_inst/rCnt_26" BEL
+        "squareWave_inst/squareWave_inst/rCnt_27" BEL
+        "squareWave_inst/squareWave_inst/rCnt_28" BEL
+        "squareWave_inst/squareWave_inst/rCnt_29" BEL
+        "squareWave_inst/squareWave_inst/rCnt_30" BEL
+        "squareWave_inst/squareWave_inst/rCnt_31" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_0" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_1" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_2" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_3" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_4" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_5" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_6" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_7" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_8" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_9" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_10" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_11" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_12" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_13" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_14" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_15" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_16" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_17" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_18" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_19" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_20" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_21" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_22" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_23" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_24" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_25" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_26" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_27" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_28" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_29" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_30" BEL
+        "squareWave_inst/squareWave_inst/rStartUpCnt_31" BEL "rCount_0_1" BEL
+        "rCount_3_1" BEL "rCount_2_1" BEL "rCount_4_1" BEL "rCount_1_1" BEL
+        "rCount_0_2" BEL "rCount_0_3" BEL "rCount_0_4" BEL "rCount_0_5";
+TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+OFFSET = IN 25 ns BEFORE COMP "clk";
+OFFSET = OUT 20 ns AFTER COMP "clk";
+SCHEMATIC END;

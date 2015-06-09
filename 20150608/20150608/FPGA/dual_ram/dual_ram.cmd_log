@@ -1,0 +1,173 @@
+xst -ise "C:/GP/long/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/long/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+ngdbuild -ise "C:/GP/long/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/long/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/long/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/long/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/long/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "D:/GraduationProject/FPGA_CODE/20150505/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "D:/GraduationProject/FPGA_CODE/20150505/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+ngdbuild -ise "D:/GraduationProject/FPGA_CODE/20150505/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "D:/GraduationProject/FPGA_CODE/20150505/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "D:/GraduationProject/FPGA_CODE/20150505/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "D:/GraduationProject/FPGA_CODE/20150505/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "D:/GraduationProject/FPGA_CODE/20150505/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "F:/20150506/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "F:/20150506/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+ngdbuild -ise "F:/20150506/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "F:/20150506/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "F:/20150506/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "F:/20150506/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "F:/20150506/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150514/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150519/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+ngdbuild -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+xst -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+ngdbuild -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+ngdbuild -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150520/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd
+xst -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/code/20150521/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/GP/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+xst -ise "C:/GP/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/GP/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/Users/Administrator/Desktop/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/Users/Administrator/Desktop/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/Users/Administrator/Desktop/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/Users/Administrator/Desktop/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+xst -ise "C:/Users/Administrator/Desktop/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -ifn dual_ram.xst -ofn dual_ram.syr
+ngdbuild -ise "C:/Users/Administrator/Desktop/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+ngdbuild -ise "C:/Users/Administrator/Desktop/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -dd _ngo -nt timestamp -uc "dual_ram.ucf" -p xcv300-pq240-4 "dual_ram.ngc" dual_ram.ngd
+map -ise "C:/Users/Administrator/Desktop/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -p xcv300-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o dual_ram_map.ncd dual_ram.ngd dual_ram.pcf
+par -ise "C:/Users/Administrator/Desktop/20150525/FPGA/dual_ram/dual_ram.ise" -w -intstyle ise -ol std -t 1 dual_ram_map.ncd dual_ram.ncd dual_ram.pcf
+trce -ise "C:/Users/Administrator/Desktop/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -e 3 -l 3 -s 4 -xml dual_ram dual_ram.ncd -o dual_ram.twr dual_ram.pcf -ucf dual_ram.ucf
+bitgen -ise "C:/Users/Administrator/Desktop/20150525/FPGA/dual_ram/dual_ram.ise" -intstyle ise -f dual_ram.ut dual_ram.ncd

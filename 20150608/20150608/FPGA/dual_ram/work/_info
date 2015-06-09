@@ -1,0 +1,159 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\GP\long\FPGA\dual_ram
+vaa
+Z1 !s100 ]E4H1@z[WkWhW>ML`7h020
+Z2 I=W4LYgj[i]f=l1ckn[E:X2
+Z3 VFJb]kokdkRkVDgW7?O?K00
+Z4 dC:\GP\code\20150520\FPGA\dual_ram
+Z5 w1432105107
+Z6 8aa.tfw
+Z7 Faa.tfw
+L0 21
+Z8 OE;L;10.0a;49
+r1
+31
+Z9 !s90 -reportprogress|300|aa.tfw|
+Z10 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s85 0
+Z11 !s108 1432108284.205000
+Z12 !s107 aa.tfw|
+vbb
+Z13 IdbZK40iGiEhKE1az<SF:L1
+Z14 V5<FKfahRzJL8zD7hE=LaL0
+Z15 dC:\GP\code\20150519\FPGA\dual_ram
+Z16 w1432103220
+Z17 8bb.tfw
+Z18 Fbb.tfw
+L0 21
+R8
+r1
+31
+R10
+Z19 !s100 Mf]1z5hjjlUCBK@DYC1[40
+Z20 !s108 1432103251.421000
+Z21 !s107 bb.tfw|
+Z22 !s90 -reportprogress|300|bb.tfw|
+!s85 0
+vdual_ram
+Z23 Ic05^FihWXHAmV=0WB[db=3
+Z24 V<ClIb?LQ]2;a]jTPH^Ee83
+R4
+Z25 w1432106544
+Z26 8dual_ram.v
+Z27 Fdual_ram.v
+L0 30
+R8
+r1
+31
+Z28 !s90 -reportprogress|300|dual_ram.v|
+R10
+Z29 !s100 [`FaN4cTQ6Nc[o=2Pk8E>1
+Z30 !s108 1432108284.111000
+Z31 !s107 dual_ram.v|
+!s85 0
+vdual_ram_core
+Z32 !s100 :jKcOj_afWRJoH8mNm?NV0
+Z33 I4gk[E]j];bjM0iXSU[hIW1
+Z34 VQ241fk0@zcEZV@1Pz?@MA0
+R4
+Z35 w1430892228
+Z36 8dual_ram_core.v
+Z37 Fdual_ram_core.v
+L0 40
+R8
+r1
+31
+Z38 !s90 -reportprogress|300|dual_ram_core.v|
+R10
+Z39 !s108 1432108283.939000
+Z40 !s107 dual_ram_core.v|
+!s85 0
+vee
+Z41 I`NA:ocjE@DG1c_<UULdob1
+Z42 V>^SUiAELWBBVZT6HNfcP10
+Z43 dF:\1111\20150505\20150505\FPGA\dual_ram
+Z44 w1430919439
+Z45 8ee.tfw
+Z46 Fee.tfw
+L0 21
+Z47 OL;L;10.0a;49
+r1
+31
+Z48 !s90 -reportprogress|300|ee.tfw|
+R10
+Z49 !s100 gM5?cbZjMdhKhK<eQon6]3
+Z50 !s108 1430919448.063000
+Z51 !s107 ee.tfw|
+!s85 0
+vglbl
+Z52 !s100 T?5S;>bN`@zG_25]R_4A33
+Z53 IM]ZbjZ3M7N:<kPHcL<Jll0
+Z54 VM[9mS]S:KA1i4VeCMX35[3
+R4
+Z55 w1147889348
+Z56 8C:/Xilinx/verilog/src/glbl.v
+Z57 FC:/Xilinx/verilog/src/glbl.v
+L0 5
+R8
+r1
+!s85 0
+31
+!s108 1432108284.299000
+!s107 C:/Xilinx/verilog/src/glbl.v|
+Z58 !s90 -reportprogress|300|C:/Xilinx/verilog/src/glbl.v|
+R10
+vqq
+Z59 !s100 1NFP:@:l7Y4mOGlO<6ME70
+Z60 IjY]_o84Ucbi1lSRoElf?M1
+Z61 VlW]2enTDmk[XjhQc8BmDK3
+R43
+Z62 w1430977614
+Z63 8qq.tfw
+Z64 Fqq.tfw
+L0 21
+R47
+r1
+31
+Z65 !s90 -reportprogress|300|qq.tfw|
+R10
+Z66 !s108 1430978605.446000
+Z67 !s107 qq.tfw|
+!s85 0
+vSquareWave
+Z68 !s100 WARA=1FGEjDE1919_=UO=0
+Z69 Ii6GXJl4D2jQcZoOk@k1I83
+Z70 VhW_<1ig9cX8ShjeE8]=551
+R4
+Z71 w1432056801
+Z72 8SquareWave.v
+Z73 FSquareWave.v
+L0 22
+R8
+r1
+31
+Z74 !s90 -reportprogress|300|SquareWave.v|
+R10
+Z75 n@square@wave
+Z76 !s108 1432108284.033000
+Z77 !s107 SquareWave.v|
+!s85 0
+vtt
+Z78 !s100 :?mIc;m3@jY<X]iKCFa8Z1
+Z79 IHC`:QZezV;FPR^=A:JICk2
+Z80 V[J?KgjdS?1JA^hfU^>kMQ2
+Z81 dE:\20150505\FPGA\dual_ram
+Z82 w1428805679
+Z83 8tt.tfw
+Z84 Ftt.tfw
+L0 21
+R47
+r1
+31
+Z85 !s90 -reportprogress|300|tt.tfw|
+R10
+Z86 !s108 1430825089.512000
+Z87 !s107 tt.tfw|
+!s85 0

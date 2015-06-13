@@ -1,0 +1,48 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="C:\GP\code\20150521\DSP\DSP_B\DSP_B\"
+ProjectType=Executable
+CPUFamily=TMS320C28XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="DSP281x_CodeStartBranch.asm"
+Source="DSP281x_DefaultIsr.c"
+Source="DSP281x_GlobalVariableDefs.c"
+Source="DSP281x_MemCopy.c"
+Source="DSP281x_PieCtrl.c"
+Source="DSP281x_PieVect.c"
+Source="DSP281x_SysCtrl.c"
+Source="DSP281x_usDelay.asm"
+Source="dualram.c"
+Source="main.c"
+Source="rts2800_ml.lib"
+Source="systemCrc16.c"
+Source="systemExternalInterrupt.c"
+Source="systemInterrupt.c"
+Source="Flash_Link.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -fr"$(Proj_dir)\Debug" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28
+
+["Compiler" Settings: "Release"]
+Options=-o3 -fr"$(Proj_dir)\Release" -d"LARGE_MODEL" -ml -v28
+
+["Linker" Settings: "Debug"]
+Options=-c -m".\Debug\DSP_B.map" -o".\Debug\DSP_B.out" -w -x
+
+["Linker" Settings: "Release"]
+Options=-c -m".\Release\DSP_B.map" -o".\Release\DSP_B.out" -w -x
+
+["Flash_Link.cmd" Settings: "Debug"]
+LinkOrder=1
+
+["Flash_Link.cmd" Settings: "Release"]
+LinkOrder=1
+

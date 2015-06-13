@@ -1,0 +1,33 @@
+-----------------------------  DSP_B.pjt - Debug  -----------------------------
+[DSP281x_CodeStartBranch.asm] "C:\CCStudio_v3.3\C2000\cgtools\bin\cl2000" -g -fr"C:/Users/Administrator/Documents/GitHub/GP/cheater/DSP_A/Debug" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28 -@"Debug.lkf" "DSP281x_CodeStartBranch.asm"
+
+[DSP281x_DefaultIsr.c] "C:\CCStudio_v3.3\C2000\cgtools\bin\cl2000" -g -fr"C:/Users/Administrator/Documents/GitHub/GP/cheater/DSP_A/Debug" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28 -@"Debug.lkf" "DSP281x_DefaultIsr.c"
+
+[DSP281x_GlobalVariableDefs.c] "C:\CCStudio_v3.3\C2000\cgtools\bin\cl2000" -g -fr"C:/Users/Administrator/Documents/GitHub/GP/cheater/DSP_A/Debug" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28 -@"Debug.lkf" "DSP281x_GlobalVariableDefs.c"
+
+[DSP281x_MemCopy.c] "C:\CCStudio_v3.3\C2000\cgtools\bin\cl2000" -g -fr"C:/Users/Administrator/Documents/GitHub/GP/cheater/DSP_A/Debug" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28 -@"Debug.lkf" "DSP281x_MemCopy.c"
+
+[DSP281x_PieCtrl.c] "C:\CCStudio_v3.3\C2000\cgtools\bin\cl2000" -g -fr"C:/Users/Administrator/Documents/GitHub/GP/cheater/DSP_A/Debug" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28 -@"Debug.lkf" "DSP281x_PieCtrl.c"
+
+[DSP281x_PieVect.c] "C:\CCStudio_v3.3\C2000\cgtools\bin\cl2000" -g -fr"C:/Users/Administrator/Documents/GitHub/GP/cheater/DSP_A/Debug" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28 -@"Debug.lkf" "DSP281x_PieVect.c"
+
+[DSP281x_SysCtrl.c] "C:\CCStudio_v3.3\C2000\cgtools\bin\cl2000" -g -fr"C:/Users/Administrator/Documents/GitHub/GP/cheater/DSP_A/Debug" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28 -@"Debug.lkf" "DSP281x_SysCtrl.c"
+
+[DSP281x_usDelay.asm] "C:\CCStudio_v3.3\C2000\cgtools\bin\cl2000" -g -fr"C:/Users/Administrator/Documents/GitHub/GP/cheater/DSP_A/Debug" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28 -@"Debug.lkf" "DSP281x_usDelay.asm"
+
+[dualram.c] "C:\CCStudio_v3.3\C2000\cgtools\bin\cl2000" -g -fr"C:/Users/Administrator/Documents/GitHub/GP/cheater/DSP_A/Debug" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28 -@"Debug.lkf" "dualram.c"
+
+[main.c] "C:\CCStudio_v3.3\C2000\cgtools\bin\cl2000" -g -fr"C:/Users/Administrator/Documents/GitHub/GP/cheater/DSP_A/Debug" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28 -@"Debug.lkf" "main.c"
+"main.c", line 45: warning: variable "Readflag" was declared but never referenced
+
+[systemCrc16.c] "C:\CCStudio_v3.3\C2000\cgtools\bin\cl2000" -g -fr"C:/Users/Administrator/Documents/GitHub/GP/cheater/DSP_A/Debug" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28 -@"Debug.lkf" "systemCrc16.c"
+
+[systemExternalInterrupt.c] "C:\CCStudio_v3.3\C2000\cgtools\bin\cl2000" -g -fr"C:/Users/Administrator/Documents/GitHub/GP/cheater/DSP_A/Debug" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28 -@"Debug.lkf" "systemExternalInterrupt.c"
+
+[systemInterrupt.c] "C:\CCStudio_v3.3\C2000\cgtools\bin\cl2000" -g -fr"C:/Users/Administrator/Documents/GitHub/GP/cheater/DSP_A/Debug" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28 -@"Debug.lkf" "systemInterrupt.c"
+
+[Linking...] "C:\CCStudio_v3.3\C2000\cgtools\bin\cl2000" -@"Debug.lkf"
+<Linking>
+
+Build Complete,
+  0 Errors, 1 Warnings, 0 Remarks.
